@@ -20,6 +20,14 @@ class ZiTextStyles {
     letterSpacing: -0.2,
   );
 
+  // Added: subHeading for Section Titles or Card Headers
+  static const TextStyle tag = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w300, // Semi-bold
+    color: ZiColors.heading,
+    letterSpacing: -0.2,
+  );
+
   // Standard reading text
   static const TextStyle body = TextStyle(
     fontSize: 14,

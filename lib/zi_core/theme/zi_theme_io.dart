@@ -7,3 +7,4 @@ export './zi_radius.dart';
 export './zi_shadows.dart';
 export './zi_spacing.dart';
 export './zi_text_styles.dart';
+export './zi_sizes.dart';

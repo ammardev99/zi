@@ -28,7 +28,7 @@ class ZiSectionHeader extends StatelessWidget {
               style: ZiTextStyles.caption.copyWith(color: ZiColors.primary),
             ),
           ),
-      ],  
+      ],
     );
   }
 }

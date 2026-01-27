@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../theme/zi_colors.dart';
-import '../buttons/zi_btn_style.dart';
+import '../../../zi_core_io.dart';
 
 class ZiIconButton extends StatelessWidget {
   final IconData icon;
@@ -32,10 +31,7 @@ class ZiIconButton extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         borderRadius: s.borderRadius,
-        child: Padding(
-          padding: s.padding!,
-          child: iconWidget,
-        ),
+        child: Padding(padding: s.padding!, child: iconWidget),
       ),
     );
   }

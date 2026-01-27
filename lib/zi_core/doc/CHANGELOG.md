@@ -20,6 +20,9 @@ Zi Software Development Plan
 
 ---
 
-> 20 Jan 2026
+> 27 Jan 2026
+
+- zi_buttons/
+- zi_loadings/
 
 ---
