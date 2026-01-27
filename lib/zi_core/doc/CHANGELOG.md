@@ -25,4 +25,45 @@ Zi Software Development Plan
 - zi_buttons/
 - zi_loadings/
 
+✨ `Added`
+
+- ZiLoading system
+- Circular, Linear, Dots, Percent, and Skeleton loaders
+- Theme-based and custom style variants
+- Skeleton loaders
+- List-based skeleton loading
+- Grid-based skeleton loading with configurable columns & ratios
+- Shimmer engine
+- Shared shimmer animation for all skeleton loaders
+- Loader overlay foundation
+- Blocking overlay loader for async operations (login, submit, fetch)
+- New UI kit components
+- Section titles and dividers
+- Menu option molecules
+- Button and icon button refinements
+
+🎨 `Updated`
+
+- Theme tokens refactored
+- Colors
+- Radius
+- Spacing
+- Typography
+- Theme IO
+- Improved consistency across Zi widgets and layouts
+- Updated widget exports (zi_widgets_io)
+
+🧹 `Removed`
+
+- Deprecated legacy loader widget
+- Deprecated tab action organism
+- Cleaned unused / experimental UI components
+
+🧱 `Internal`
+
+- Prepared foundation for:
+- Input system (ZiInput, ZiInputType, ZiInputStyle)
+- Controlled form validation
+- Future overlay & feedback components
+
 ---
