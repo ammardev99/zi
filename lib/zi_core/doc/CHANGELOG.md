@@ -22,14 +22,65 @@ Zi Software Development Plan
 
 > Zi_Architechture
 
-- zi_name_type      // can use in diffrent cases
 - zi_name_style     // can follow same design system
-- zi_name_variant   // can be diffrent layout
+- zi_name_type      // can use in diffrent cases
 - zi_get_name       // get used by main public widget
+- zi_name_variant   // can be diffrent layout
 architecture → consistency = maintainability.
 - Visual
 - Layout
 - Behavior
+
+> 29 Jan 2026
+
+- Zi Bottom bar - awesome_bottom_bar: ^1.2.4 [link] {pub.dev/packages/awesome_bottom_bar}
+
+- Awesome Bottom Bar
+  - IOS
+  - Android
+
+- Intresting Styles
+  - default
+  - creative
+  - creativeHexagon
+  - floating
+  - inspiredOutsideDeep
+  - inspiredTop
+  - salomon
+
+- Others Styles
+  - background
+  - borderBottom
+  - background
+  - borderBottom
+  - borderTop
+  - bottomTop
+  - creative
+  - default
+  - fancyBorder
+  - fancyDot
+  - fancyBorder
+  - fancyDot
+  - inspiredInside
+  - floating
+  - inspiredInside
+  - inspiredInsideHexagon
+  - inspiredOutSide
+  - inspiredInsideHexagon
+  - inspiredOutSide
+  - inspiredOutSideHexagon
+  - inspiredOutsideDeep
+  - inspiredOutSideHexagon
+  - inspiredOutsideRadius
+  - inspiredTopHexagon
+  - inspiredOutsideRadius
+  - inspiredTopHexagon
+
+- Introduced `ZiBottomBar` as a unified bottom navigation bar for Zi Ecosystem.
+- Supports multiple styles via `ZiBottomBarType` (InspiredOutside, Creative, Fancy, Divider, etc.).
+- Configurable design system through `ZiBottomBarStyle` (backgroundColor, activeColor, inactiveColor, elevation, animation).
+- Wrappers for `awesome_bottom_bar` package implemented internally to ensure consistent API.
+- Enables future expansion: floating icons, hexagon/diamond shapes, labels on/off.
 
 > 28 Jan 2026
 

@@ -41,6 +41,11 @@ export './molecules/loadings/variations/zi_linear.dart';
 export './molecules/buttons/zi_fill_button.dart.dart';
 export './molecules/buttons/zi_btn_style.dart';
 
+// zi_bottom_bar
+export './organisms/bottom_navigation/zi_bottom_bar.dart';
+export './organisms/bottom_navigation/zi_bottom_bar_style.dart';
+export './organisms/bottom_navigation/zi_bottom_bar_type.dart';
+
 //---------------------------------//
 // Atoms
 // Examples: text, icon, button, icon_button, divider, avatar, badge, loader

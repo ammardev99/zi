@@ -1,7 +1,6 @@
 import 'package:zi/zi_core/zi_core_io.dart';
 import 'package:flutter/material.dart';
 
-
 class ViewButtons extends StatelessWidget {
   const ViewButtons({super.key});
 
@@ -34,18 +33,30 @@ class ViewButtons extends StatelessWidget {
                 ),
               ],
             ),
-            SectionDivider(label: "Loadings "),
+            SizedBox(height: 20),
             Row(
               children: [
-                ZiLoading(),
-                SizedBox(width: 20),
-                ZiLoading(type: ZiLoadingType.linear),
-                SizedBox(width: 20),
-                ZiLoading(type: ZiLoadingType.circularPercent, ziLoadstyle: ZiLoadingStyle(
-                  value: 0.85,
-                  showPercentage: true,
-                ),),
-                SizedBox(width: 20),
+                ZiFillButton(
+                  label: "Save",
+
+                  onAction: ZiTapAction(type: ZiTapActionType.dialog),
+                  style: ZiBtnStyle.icon(),
+                ),
+                SizedBox(width: 10),
+                ZiFillButton(
+                  label: "Save",
+                  loading: true,
+                  onAction: ZiTapAction(type: ZiTapActionType.dialog),
+                  style: ZiBtnStyle.outline(),
+                ),
+                SizedBox(width: 10),
+                ZiFillButton(
+                  label: "Save",
+                  onAction: ZiTapAction(type: ZiTapActionType.dialog),
+                  style: ZiBtnStyle.gradient(
+                    colors: [Colors.purple, Colors.blue],
+                  ),
+                ),
               ],
             ),
           ],
