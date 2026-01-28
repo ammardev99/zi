@@ -48,4 +48,27 @@ class ZiTextStyles {
     fontWeight: FontWeight.normal,
     color: ZiColors.grayLight,
   );
+
+  // Zi Specifiers
+  // Zi input
+
+  static const TextStyle inputLabel = TextStyle(
+    fontSize: 13,
+    fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle inputText = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+  );
+
+  static const TextStyle inputHint = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+  );
+
+  static const TextStyle inputError = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+  );
 }

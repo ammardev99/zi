@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme/zi_theme_io.dart';
+import '../../../../theme/zi_theme_io.dart';
 
 class ZiSecondaryButton extends StatelessWidget {
   final String title;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../theme/zi_colors.dart';
-import '../buttons/zi_btn_style.dart';
+import '../../../../theme/zi_colors.dart';
+import '../../buttons/zi_btn_style.dart';
 
 class ZiIconButton extends StatelessWidget {
   final IconData icon;

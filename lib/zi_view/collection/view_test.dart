@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:zi/zi_core/zi_core_io.dart';
 
 
-class TestPage extends StatelessWidget {
-  const TestPage({super.key});
+class ViewTestPage extends StatelessWidget {
+  const ViewTestPage({super.key});
 
   @override
   Widget build(BuildContext context) {

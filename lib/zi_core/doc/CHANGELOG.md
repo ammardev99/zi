@@ -20,6 +20,36 @@ Zi Software Development Plan
 
 ---
 
+> Zi_Architechture
+
+- zi_name_type      // can use in diffrent cases
+- zi_name_style     // can follow same design system
+- zi_name_variant   // can be diffrent layout
+- zi_get_name       // get used by main public widget
+architecture → consistency = maintainability.
+- Visual
+- Layout
+- Behavior
+
+> 28 Jan 2026
+
+- zi_core/widgets/zi_inputs/
+- zi_core/widgets/zi_forms/
+- My Zi inputs
+  - zi_input_style_variant  //
+  - zi_input_layout         //
+- Introduced a new unified `ZiInput` system with support for multiple variants:
+  - outline
+  - filled
+  - underlined
+  - stacked
+- Added input style abstraction via `ZiInputStyle`
+- Added variant-based decoration builder using `ZiInputStyleVariant`
+- Added input type handling utilities (text, phone, password, etc.)
+- Added `view_inputs` screen to showcase and test all input configurations
+
+---
+
 > 27 Jan 2026
 
 - zi_buttons/

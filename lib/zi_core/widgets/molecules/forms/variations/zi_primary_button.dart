@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../../theme/zi_colors.dart';
-import '../../../theme/zi_radius.dart';
-import '../../../theme/zi_spacing.dart';
-import '../../../theme/zi_text_styles.dart';
+import '../../../../theme/zi_colors.dart';
+import '../../../../theme/zi_radius.dart';
+import '../../../../theme/zi_spacing.dart';
+import '../../../../theme/zi_text_styles.dart';
 
 class ZiPrimaryButton extends StatelessWidget {
   final String title;

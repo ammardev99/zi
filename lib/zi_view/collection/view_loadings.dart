@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../zi_core/zi_core_io.dart';
 
-
-
 class ViewLoadings extends StatelessWidget {
   const ViewLoadings({super.key});
 

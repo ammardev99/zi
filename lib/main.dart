@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zi/zi_core/theme/zi_theme_io.dart';
 
 import 'zi_view/zi_collection.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: ZiColors.primary),
       ),
       home: ZiCollection(),
     );

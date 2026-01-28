@@ -1,4 +1,5 @@
 import 'package:zi/zi_core/zi_core_io.dart';
+import 'package:zi/zi_view/collection/view_inputs.dart';
 import 'collection/view_buttons.dart';
 import 'collection/view_loadings.dart';
 import 'collection/view_menu_options.dart';
@@ -19,9 +20,10 @@ class ZiCollection extends StatelessWidget {
           CollectionTab(label: "Menu Options", page: MenuOptions()),
           CollectionTab(label: "View Buttons", page: ViewButtons()),
           CollectionTab(label: "Loadings", page: ViewLoadings()),
-          CollectionTab(label: "Test Page", page: TestPage()),
-          CollectionTab(label: "Test Page", page: TestPage()),
-          CollectionTab(label: "Test Page", page: TestPage()),
+          CollectionTab(label: "Inputs", page: ViewZiInputs()),
+          CollectionTab(label: "Test Page", page: ViewTestPage()),
+          CollectionTab(label: "Test Page", page: ViewTestPage()),
+          CollectionTab(label: "Test Page", page: ViewTestPage()),
           Divider(),
         ],
       ),

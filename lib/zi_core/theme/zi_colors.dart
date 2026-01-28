@@ -34,4 +34,15 @@ class ZiColors {
   static const Color testR = Colors.red;
   static const Color testG = Colors.green;
   static const Color testY = Colors.amber;
+
+  // Zi Specific Colors
+  // Zi Inputs
+  static const Color inputBackground = Color(0xFFFFFFFF);
+  static const Color inputBorder = Color(0xFFCED4DA);
+  static const Color inputText = Color(0xFF1C1C1E);
+  static const Color inputHint = Color(0xFF8E8E93);
+  static const Color inputFocused = ZiColors.primary;
+  static const Color inputError = Color(0xFFFF3B30);
+  static const Color inputDisabled = Color(0xFFE5E5EA);
+  static const Color inputFilledBackground = Color(0xFFF5F6FA);
 }

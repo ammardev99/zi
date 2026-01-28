@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/zi_text_styles.dart';
-import '../widgets/molecules/forms/zi_primary_button.dart';
+import '../widgets/molecules/forms/variations/zi_primary_button.dart';
 
 class ZiDialog extends StatelessWidget {
   final String title;
