@@ -1,6 +1,8 @@
 import 'package:zi/zi_core/zi_core_io.dart';
 import 'package:zi/zi_view/collection/view_bottom_bar.dart';
+import 'package:zi/zi_view/collection/view_feedover.dart';
 import 'package:zi/zi_view/collection/view_inputs.dart';
+import 'package:zi/zi_view/collection/view_selections.dart';
 import 'collection/view_buttons.dart';
 import 'collection/view_loadings.dart';
 import 'collection/view_menu_options.dart';
@@ -23,6 +25,8 @@ class ZiCollection extends StatelessWidget {
           CollectionTab(label: "Loadings", page: ViewLoadings()),
           CollectionTab(label: "Inputs", page: ViewZiInputs()),
           CollectionTab(label: "Bottom Bar Page", page: ViewBottomBars()),
+          CollectionTab(label: "FeedOver", page: ViewFeedOver()),
+          CollectionTab(label: "Selections", page: ViewSelections()),
           CollectionTab(label: "Test Page", page: ViewTestPage()),
           CollectionTab(label: "Test Page", page: ViewTestPage()),
           CollectionTab(label: "Test Page", page: ViewTestPage()),

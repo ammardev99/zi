@@ -31,7 +31,36 @@ architecture → consistency = maintainability.
 - Layout
 - Behavior
 
+> in queue
+
+- Zi Pickers/Helpers
+- Zi FeedOver
+  - Toasts
+  - ZiSnackbar
+  - ZiDialog
+  - ZiBottomSheer
+- Zi Selections
+  - ZiRadio
+  - ZiSwitch
+  - ZiCheckbox
+  - zi_dropdown
+- indicators
+  - zi_badge.dart
+  - zi_status_dot.dart
+  - zi_progress_indicator.dart
+- states
+  - zi_empty_state.dart
+  - zi_error_state.dart
+  - zi_loading_state.dart
+
 > 29 Jan 2026
+
+- feedback/
+  - toasts/
+  - snackbars/
+  - dialogs/
+  - bottom_sheets/
+  - controllers/
 
 - Zi Bottom bar - awesome_bottom_bar: ^1.2.4 [link] {pub.dev/packages/awesome_bottom_bar}
 
