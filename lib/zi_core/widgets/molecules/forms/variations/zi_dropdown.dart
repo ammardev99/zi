@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../theme/zi_colors.dart';
 import '../../../../theme/zi_radius.dart';
-import '../../../../theme/zi_text_styles.dart';
+import '../../../../theme/zi_typography.dart';
 
 class ZiDropdown<T> extends StatelessWidget {
   final T? value;
@@ -22,7 +22,7 @@ class ZiDropdown<T> extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(ZiRadius.input),
+        borderRadius: BorderRadius.circular(ZiRadius.md),
         border: Border.all(color: ZiColors.grayLight),
       ),
       child: DropdownButtonHideUnderline(
@@ -30,7 +30,7 @@ class ZiDropdown<T> extends StatelessWidget {
           value: value,
           items: items,
           onChanged: onChanged,
-          hint: Text(hint, style: ZiTextStyles.body),
+          hint: Text(hint, style: ZiTextStyles.bodyMedium),
           isExpanded: true,
         ),
       ),

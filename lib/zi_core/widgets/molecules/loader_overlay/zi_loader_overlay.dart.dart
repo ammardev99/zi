@@ -129,7 +129,7 @@ class _OverlayContent extends StatelessWidget {
               const SizedBox(height: 12),
               Text(
                 message!,
-                style: ZiTextStyles.tag,
+                style: ZiTextStyles.labelLarge,
                 textAlign: TextAlign.center,
               ),
             ],
@@ -146,7 +146,7 @@ class _OverlayContent extends StatelessWidget {
               const SizedBox(height: 12),
               Text(
                 message!,
-                style: ZiTextStyles.tag,
+                style: ZiTextStyles.titleMedium,
                 textAlign: TextAlign.center,
               ),
             ],

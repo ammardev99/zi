@@ -1,7 +1,9 @@
-class ZiElevations {
-  ZiElevations._();
+class ZiElevation {
+  ZiElevation._();
 
-  static const double low = 2;
-  static const double medium = 6;
-  static const double high = 12;
+  static const double none = 0;
+  static const double lowCards = 1; // cards
+  static const double mediumModals = 3; // modals
+  static const double highOverlays = 6; // overlays
+  static const double maxFloating = 12; // floating
 }

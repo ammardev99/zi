@@ -44,6 +44,6 @@ class ZiInputStyle {
     errorColor: ZiColors.inputError,
     labelStyle: ZiTextStyles.inputLabel,
     hintStyle: ZiTextStyles.inputHint,
-    textStyle: ZiTextStyles.inputText,
+    textStyle: ZiTextStyles.input,
   );
 }

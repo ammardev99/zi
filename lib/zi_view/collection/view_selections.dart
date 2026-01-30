@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zi/zi_core/widgets/atoms/indicators/zi_progress_indicator.dart';
-import 'package:zi/zi_core/widgets/atoms/indicators/zi_status_dot.dart';
 import 'package:zi/zi_core/widgets/molecules/forms/selections/zi_checkbox.dart';
 import 'package:zi/zi_core/widgets/molecules/forms/selections/zi_radio.dart';
 import 'package:zi/zi_core/widgets/molecules/forms/selections/zi_switch.dart';
@@ -67,9 +65,9 @@ class _ViewSelectionsState extends State<ViewSelections> {
             //   onChanged: (v) => setState(() => country = v),
             // );
             SectionDivider(label: "label"),
-            ZiBadge(count: 5, child: Icon(Icons.notification_important)),
+            // ZiBadge(count: 5, child: Icon(Icons.notification_important)),
             // Badge
-            // ZiBadge(label: "NEW");
+            ZiBadge(label: "NEW"),
 
             // Status dot
             ZiStatusDot(color: Colors.green),

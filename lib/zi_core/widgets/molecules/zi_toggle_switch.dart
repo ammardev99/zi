@@ -19,7 +19,7 @@ class ZiToggleSwitch extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        if (label != null) Text(label!, style: ZiTextStyles.body),
+        if (label != null) Text(label!, style: ZiTextStyles.bodyMedium),
         Switch.adaptive(
           value: value,
           onChanged: onChanged,

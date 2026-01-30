@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../theme/zi_colors.dart';
-import '../../theme/zi_text_styles.dart';
+import '../../theme/zi_typography.dart';
 
 class ZiSectionHeader extends StatelessWidget {
   final String title;

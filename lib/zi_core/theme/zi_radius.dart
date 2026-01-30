@@ -1,18 +1,22 @@
 class ZiRadius {
   ZiRadius._();
 
-  static const double sm = 4.0;
-  static const double md = 8.0;
-  static const double lg = 16.0;
+  // Base scale
+  static const double none = 0;
+  static const double xs = 4;
+  static const double sm = 8;
+  static const double md = 12;
+  static const double lg = 16;
+  static const double xl = 24;
+  static const double full = 999;
 
-  // Component Specific
-  static const double button = 8; // 8, 12, 24,
-  static const double card = 16.0;
-  static const double input = 8.0;
+  // Component aliases (NO logic here)
+  static const double button = sm;
+  static const double card = lg;
 
-  // zi input
-  static const double inputsm = 8;
-  static const double inputmd = 12;
-  static const double inputlg = 16;
-  static const double inputfull = 100;
+  // Input compatibility
+  static const double inputsm = sm;
+  static const double inputmd = md;
+  static const double inputlg = lg;
+  static const double inputfull = full;
 }

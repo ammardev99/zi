@@ -21,7 +21,7 @@ class ZiAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: centerTitle,
       title: Text(
         title,
-        style: ZiTextStyles.heading.copyWith(
+        style: ZiTextStyles.subHeading.copyWith(
           color: ZiColors.white,
           fontSize: 20,
         ),

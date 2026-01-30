@@ -8,17 +8,15 @@ export 'organisms/zi_tab_bar.dart';
 
 // Widgets
 export 'atoms/zi_chip.dart';
+
+// molecules
 export 'molecules/menu_options/tap_action.dart';
-export 'atoms/zi_badge.dart';
 export 'molecules/forms/variations/zi_dropdown.dart';
 export 'molecules/forms/variations/zi_primary_button.dart';
 export 'molecules/forms/variations/zi_secondary_button.dart';
 export 'molecules/forms/variations/zi_toggle_switch.dart';
 export 'molecules/zi_card.dart';
-export 'atoms/zi_empty_state.dart';
 export 'molecules/zi_section_header.dart';
-
-// molecules
 export 'molecules/buttons/zi_button.dart';
 export './atoms/zi_section_divider.dart';
 export './molecules/zi_section_title.dart';
@@ -57,3 +55,19 @@ export './organisms/bottom_navigation/zi_bottom_bar_type.dart';
 
 // Templates
 // Examples: auth_template, dashboard_template, list_template, form_template
+
+// ---------- io ------------- //
+
+// Atoms
+// indicators
+export './atoms/indicators/zi_badge.dart';
+export './atoms/indicators/zi_progress_indicator.dart';
+export './atoms/indicators/zi_status_dot.dart';
+// states
+export './atoms/states/zi_empty_state.dart';
+export './atoms/states/zi_error_state.dart';
+export './atoms/states/zi_loading_state.dart';
+
+//
+
+//
