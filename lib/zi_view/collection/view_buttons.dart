@@ -1,66 +1,87 @@
-import 'package:zi/zi_core/zi_core_io.dart';
 import 'package:flutter/material.dart';
+
+import '../../zi_core/widgets/molecules/buttons_b/zi_get_btn.dart';
+import '../../zi_core/widgets/molecules/buttons_b/zi_btn_style.dart';
+import '../../zi_core/zi_core_io.dart';
 
 class ViewButtons extends StatelessWidget {
   const ViewButtons({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: ZiAppBar(title: "Buttons"),
-      body: Padding(
-        padding: EdgeInsets.all(15),
-        child: Column(
-          children: [
-            SectionDivider(label: "Enm Buttons"),
-            Row(
-              children: [
-                ZiFillButton(
-                  label: "Save",
-                  onAction: ZiTapAction(type: ZiTapActionType.dialog),
+    return ZiScaffold(
+      appBar: ZiAppBar(title: "ZiButtons Preview"),
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: [
+          Wrap(
+            spacing: 12,
+            runSpacing: 12,
+            children: [
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.primary,
+                onTap: () {},
+                label: "Primary",
+                style: ZiButtonStyleB(height: ZiSizes.btnHeightApp),
+              ),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.primary,
+                onTap: () {},
+                label: "Primary",
+                style: ZiButtonStyleB(height: ZiSizes.btnHeightWeb),
+              ),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.primary,
+                onTap: () {},
+                label: "Primary",
+              ),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.primary,
+                onTap: () {},
+                label: "Primary",
+                expand: true,
+                style: ZiButtonStyleB(),
+              ),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.secondary,
+                onTap: () {},
+                label: "Secondary",
+              ),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.outline,
+                onTap: () {},
+                label: "Outline",
+              ),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.destructive,
+                onTap: () {},
+                label: "Delete",
+              ),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.text,
+                onTap: () {},
+                label: "Text",
+              ),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.icon,
+                onTap: () {},
+                icon: Icon(Icons.favorite),
+                style: ZiButtonStyleB(iconSize: 2, elevation: 2),
+              ),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.iconFillCircular,
+                onTap: () {},
+                icon: Icon(Icons.send),
+                style: ZiButtonStyleB(
+                  iconSize: 5,
+                  elevation: 5,
+                  height: 30,
+                  width: 30,
                 ),
-                SizedBox(width: 10),
-                ZiFillButton(
-                  label: "Save",
-                  loading: true,
-                  onAction: ZiTapAction(type: ZiTapActionType.dialog),
-                  style: ZiBtnStyle.fill(expand: true),
-                ),
-                SizedBox(width: 10),
-                ZiFillButton(
-                  label: "Save",
-                  onAction: ZiTapAction(type: ZiTapActionType.dialog),
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
-            Row(
-              children: [
-                ZiFillButton(
-                  label: "Save",
-
-                  onAction: ZiTapAction(type: ZiTapActionType.dialog),
-                  style: ZiBtnStyle.icon(),
-                ),
-                SizedBox(width: 10),
-                ZiFillButton(
-                  label: "Save",
-                  loading: true,
-                  onAction: ZiTapAction(type: ZiTapActionType.dialog),
-                  style: ZiBtnStyle.outline(),
-                ),
-                SizedBox(width: 10),
-                ZiFillButton(
-                  label: "Save",
-                  onAction: ZiTapAction(type: ZiTapActionType.dialog),
-                  style: ZiBtnStyle.gradient(
-                    colors: [Colors.purple, Colors.blue],
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

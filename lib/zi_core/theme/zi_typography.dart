@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'zi_colors.dart';
+import '../zi_core_io.dart';
 
 class ZiTextStyles {
   ZiTextStyles._();
@@ -7,42 +7,42 @@ class ZiTextStyles {
   // =========================
   // Display (Marketing / Hero)
   // =========================
-  static const TextStyle displayLarge = TextStyle(
-    fontSize: 32,
-    height: 1.25,
-    fontWeight: FontWeight.w700,
-    letterSpacing: -0.5,
-    color: ZiColors.textPrimary,
-  );
+  // static const TextStyle displayLarge = TextStyle(
+  //   fontSize: 32,
+  //   height: 1.25,
+  //   fontWeight: FontWeight.w600,
+  //   letterSpacing: -0.5,
+  //   color: ZiColors.textPrimary,
+  // );
 
-  static const TextStyle displayMedium = TextStyle(
-    fontSize: 28,
-    height: 1.25,
-    fontWeight: FontWeight.w600,
-    color: ZiColors.textPrimary,
-  );
+//   static const TextStyle displayMedium = TextStyle(
+//     fontSize: 28,
+//     height: 1.25,
+//     fontWeight: FontWeight.w600,
+//     color: ZiColors.textPrimary,
+//   );
 
-  // =========================
-  // Headlines (Screen titles)
-  // =========================
-  static const TextStyle headlineLarge = TextStyle(
-    fontSize: 24,
-    height: 1.3,
-    fontWeight: FontWeight.w600,
-    color: ZiColors.textPrimary,
-  );
+//   // =========================
+//   // Headlines (Screen titles)
+//   // =========================
+//   static const TextStyle headlineLarge = TextStyle(
+//     fontSize: 24,
+//     height: 1.3,
+//     fontWeight: FontWeight.w600,
+//     color: ZiColors.textPrimary,
+//   );
 
-  static const TextStyle headlineMedium = headlineLarge;
+//   static const TextStyle headlineMedium = headlineLarge;
 
-  // =========================
-  // Titles (Sections, Cards)
-  // =========================
-  static const TextStyle titleLarge = TextStyle(
-    fontSize: 20,
-    height: 1.35,
-    fontWeight: FontWeight.w600,
-    color: ZiColors.textPrimary,
-  );
+//   // =========================
+//   // Titles (Sections, Cards)
+//   // =========================
+//   static const TextStyle titleLarge = TextStyle(
+//     fontSize: 20,
+//     height: 1.35,
+//     fontWeight: FontWeight.w600,
+//     color: ZiColors.textPrimary,
+//   );
 
   static const TextStyle titleMedium = TextStyle(
     fontSize: 18,
@@ -51,22 +51,22 @@ class ZiTextStyles {
     color: ZiColors.textPrimary,
   );
 
-  static const TextStyle titleSmall = TextStyle(
-    fontSize: 16,
-    height: 1.4,
-    fontWeight: FontWeight.w500,
-    color: ZiColors.textPrimary,
-  );
+//   static const TextStyle titleSmall = TextStyle(
+//     fontSize: 16,
+//     height: 1.4,
+//     fontWeight: FontWeight.w500,
+//     color: ZiColors.textPrimary,
+//   );
 
-  // =========================
-  // Body (Primary reading)
-  // =========================
-  static const TextStyle bodyLarge = TextStyle(
-    fontSize: 16,
-    height: 1.5,
-    fontWeight: FontWeight.w400,
-    color: ZiColors.textPrimary,
-  );
+//   // =========================
+//   // Body (Primary reading)
+//   // =========================
+//   static const TextStyle bodyLarge = TextStyle(
+//     fontSize: 16,
+//     height: 1.5,
+//     fontWeight: FontWeight.w400,
+//     color: ZiColors.textPrimary,
+//   );
 
   static const TextStyle bodyMedium = TextStyle(
     fontSize: 14,
@@ -75,16 +75,16 @@ class ZiTextStyles {
     color: ZiColors.textSecondary,
   );
 
-  static const TextStyle bodySmall = TextStyle(
-    fontSize: 13,
-    height: 1.45,
-    fontWeight: FontWeight.w400,
-    color: ZiColors.textSecondary,
-  );
+//   static const TextStyle bodySmall = TextStyle(
+//     fontSize: 13,
+//     height: 1.45,
+//     fontWeight: FontWeight.w400,
+//     color: ZiColors.textSecondary,
+//   );
 
-  // =========================
-  // Labels (Buttons, Chips)
-  // =========================
+//   // =========================
+//   // Labels (Buttons, Chips)
+//   // =========================
   static const TextStyle labelLarge = TextStyle(
     fontSize: 14,
     height: 1.2,
@@ -92,19 +92,19 @@ class ZiTextStyles {
     color: ZiColors.textWhite,
   );
 
-  static const TextStyle labelMedium = TextStyle(
-    fontSize: 13,
-    height: 1.2,
-    fontWeight: FontWeight.w600,
-    color: ZiColors.textWhite,
-  );
+//   static const TextStyle labelMedium = TextStyle(
+//     fontSize: 13,
+//     height: 1.2,
+//     fontWeight: FontWeight.w600,
+//     color: ZiColors.textWhite,
+//   );
 
-  // Backward compatibility
-  static const TextStyle button = labelLarge;
+//   // Backward compatibility
+//   static const TextStyle button = labelLarge;
 
-  // =========================
-  // Inputs
-  // =========================
+//   // =========================
+//   // Inputs
+//   // =========================
   static const TextStyle inputLabel = TextStyle(
     fontSize: 13,
     height: 1.3,
@@ -126,16 +126,16 @@ class ZiTextStyles {
     color: ZiColors.textMuted,
   );
 
-  static const TextStyle inputError = TextStyle(
-    fontSize: 12,
-    height: 1.3,
-    fontWeight: FontWeight.w400,
-    color: ZiColors.error,
-  );
+//   static const TextStyle inputError = TextStyle(
+//     fontSize: 12,
+//     height: 1.3,
+//     fontWeight: FontWeight.w400,
+//     color: ZiColors.error,
+//   );
 
-  // =========================
-  // Caption / Meta
-  // =========================
+//   // =========================
+//   // Caption / Meta
+//   // =========================
   static const TextStyle caption = TextStyle(
     fontSize: 12,
     height: 1.3,
@@ -143,9 +143,9 @@ class ZiTextStyles {
     color: ZiColors.textMuted,
   );
 
-  // =========================
-  // Legacy / Compatibility
-  // =========================
+//   // =========================
+//   // Legacy / Compatibility
+//   // =========================
   static const TextStyle subHeading = titleMedium;
-  static const TextStyle tag = labelMedium;
+  static const TextStyle tag = caption;
 }

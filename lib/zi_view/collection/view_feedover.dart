@@ -1,5 +1,6 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:zi/zi_core/widgets/molecules/buttons_b/zi_get_btn.dart';
 import 'package:zi/zi_core/widgets/molecules/feedover/bottom_sheets/zi_action_sheet.dart';
 import 'package:zi/zi_core/widgets/molecules/feedover/bottom_sheets/zi_bottom_sheet.dart';
 import 'package:zi/zi_core/widgets/molecules/feedover/dialogs/zi_alert_dialog.dart';
@@ -27,174 +28,10 @@ class ViewFeedOver extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               SizedBox(width: 4),
-              ZiFillButton(
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.secondary,
                 label: "error",
-                onAction: ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () {
-                    ZiFeedback.toast(
-                      context,
-                      message: "Toast Message here",
-                      type: ZiToastType.error,
-                    );
-                  },
-                ),
-              ),
-
-              SizedBox(width: 4),
-              ZiFillButton(
-                label: "info",
-                onAction: ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () {
-                    ZiFeedback.toast(
-                      context,
-                      message: "Toast Message here",
-                      type: ZiToastType.info,
-                    );
-                  },
-                ),
-              ),
-
-              SizedBox(width: 4),
-              ZiFillButton(
-                label: "success",
-                onAction: ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () {
-                    ZiFeedback.toast(
-                      context,
-                      message: "Toast Message here",
-                      type: ZiToastType.success,
-                    );
-                  },
-                ),
-              ),
-
-              SizedBox(width: 4),
-              ZiFillButton(
-                label: "warning",
-                onAction: ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () {
-                    ZiFeedback.toast(
-                      context,
-                      message: "Toast Message here",
-                      type: ZiToastType.warning,
-                    );
-                  },
-                ),
-              ),
-
-              SizedBox(width: 4),
-            ],
-          ),
-
-          SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ZiFillButton(
-                label: "error",
-                onAction: ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () {
-                    ZiFeedback.snackbar(
-                      context,
-                      message: "No internet connection",
-                      type: ZiSnackbarType.error,
-                      actionLabel: "Retry",
-                      onAction: () {},
-                    );
-                  },
-                ),
-              ),
-              SizedBox(width: 4),
-              ZiFillButton(
-                label: "info",
-                onAction: ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () {
-                    ZiFeedback.snackbar(
-                      context,
-                      message: "Edit Profile",
-                      type: ZiSnackbarType.info,
-                      actionLabel: "Undo",
-                      onAction: () {},
-                    );
-                  },
-                ),
-              ),
-              SizedBox(width: 4),
-              ZiFillButton(
-                label: "success",
-                onAction: ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () {
-                    ZiFeedback.snackbar(
-                      context,
-                      message: "File Added",
-                      type: ZiSnackbarType.success,
-                      actionLabel: "Undo",
-                      onAction: () {},
-                    );
-                  },
-                ),
-              ),
-              SizedBox(width: 4),
-              ZiFillButton(
-                label: "warning",
-                onAction: ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () {
-                    ZiFeedback.snackbar(
-                      context,
-                      message: "Will not back",
-                      type: ZiSnackbarType.warning,
-                    );
-                  },
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 10),
-          //TODO: Improve ui design
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ZiFillButton(
-                label: "Error",
-                onAction: ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () {
-                    // Alert
-                    ZiAlertDialog.show(
-                      context,
-                      title: "Error",
-                      message: "Something went wrong",
-                    );
-                  },
-                ),
-              ),
-              ZiFillButton(
-                label: "Delete",
-                onAction: ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () async {
-                    // Confirm
-                    await ZiConfirmDialog.show(
-                      context,
-                      title: "Delete",
-                      message: "Are you sure?",
-                    );
-                  },
-                ),
-              ),
-              ZiFillButton(
-                label: "Options",
-                onAction: ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () {
+                onTap: () {
                     // Bottom Sheet
                     ZiBottomSheet.show(
                       context,
@@ -205,11 +42,149 @@ class ViewFeedOver extends StatelessWidget {
                         ],
                       ),
                     );
-                  },
-                ),
+                },
               ),
+
+              SizedBox(width: 4),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.secondary,
+                label: "error",
+                onTap: () async {
+                    // Confirm
+                    await ZiConfirmDialog.show(
+                      context,
+                      title: "Delete",
+                      message: "Are you sure?",
+                    );
+                },
+              ),
+
+              SizedBox(width: 4),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.secondary,
+                label: "error",
+                onTap: () {
+                    // Alert
+                    ZiAlertDialog.show(
+                      context,
+                      title: "Error",
+                      message: "Something went wrong",
+                    );
+                  
+
+                },
+              ),
+
+              SizedBox(width: 4),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.secondary,
+                label: "error",
+                onTap: () {
+                    ZiFeedback.snackbar(
+                      context,
+                      message: "Will not back",
+                      type: ZiSnackbarType.warning,
+                    );
+                },
+              ),
+
+              SizedBox(width: 4),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.secondary,
+                label: "error",
+                onTap: () {
+                    ZiFeedback.snackbar(
+                      context,
+                      message: "File Added",
+                      type: ZiSnackbarType.success,
+                      actionLabel: "Undo",
+                      onAction: () {},
+                    );
+                },
+              ),
+
+              SizedBox(width: 4),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.secondary,
+                label: "error",
+                onTap: () {
+                    ZiFeedback.snackbar(
+                      context,
+                      message: "Edit Profile",
+                      type: ZiSnackbarType.info,
+                      actionLabel: "Undo",
+                      onAction: () {},
+                    );
+                },
+              ),
+
+              SizedBox(width: 4),
+
+              SizedBox(width: 4),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.secondary,
+                label: "error",
+                onTap: () {
+                    ZiFeedback.snackbar(
+                      context,
+                      message: "No internet connection",
+                      type: ZiSnackbarType.error,
+                      actionLabel: "Retry",
+                      onAction: () {},
+                    );
+                },
+              ),
+Divider(),
+              SizedBox(width: 4),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.secondary,
+                label: "warning",
+                onTap: () {
+                    ZiFeedback.toast(
+                      context,
+                      message: "Toast Message here",
+                      type: ZiToastType.warning,
+                    );
+                },
+              ),
+
+              SizedBox(width: 4),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.secondary,
+                label: "success",
+                onTap: () {
+                    ZiFeedback.toast(
+                      context,
+                      message: "Toast Message here",
+                      type: ZiToastType.success,
+                    );
+                },
+              ),
+
+              SizedBox(width: 4),
+              ZiGetButtonB.get(
+                variant: ZiButtonVariantB.secondary,
+                label: "info",
+                onTap: () {
+                    ZiFeedback.toast(
+                      context,
+                      message: "Toast Message here",
+                      type: ZiToastType.info,
+                    );
+                },
+              ),
+
+              SizedBox(width: 4),
+
+              SizedBox(width: 4),
+
+              SizedBox(width: 4),
+
+              SizedBox(width: 4),
             ],
           ),
+
+          SizedBox(height: 10),
           SizedBox(height: 10),
         ],
       ),

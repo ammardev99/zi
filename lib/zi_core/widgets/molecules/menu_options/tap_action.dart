@@ -30,10 +30,7 @@ class ZiTapAction {
 
       case ZiTapActionType.openPage:
         if (page != null) {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => page!),
-          );
+          Navigator.push(context, MaterialPageRoute(builder: (_) => page!));
         }
         break;
 

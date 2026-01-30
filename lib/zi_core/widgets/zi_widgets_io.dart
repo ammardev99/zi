@@ -11,13 +11,8 @@ export 'atoms/zi_chip.dart';
 
 // molecules
 export 'molecules/menu_options/tap_action.dart';
-export 'molecules/forms/variations/zi_dropdown.dart';
-export 'molecules/forms/variations/zi_primary_button.dart';
-export 'molecules/forms/variations/zi_secondary_button.dart';
-export 'molecules/forms/variations/zi_toggle_switch.dart';
 export 'molecules/zi_card.dart';
 export 'molecules/zi_section_header.dart';
-export 'molecules/buttons/zi_button.dart';
 export './atoms/zi_section_divider.dart';
 export './molecules/zi_section_title.dart';
 export './molecules/loader_overlay/zi_loader_overlay.dart.dart';
@@ -35,13 +30,14 @@ export './molecules/loadings/variations/zi_circular_percent.dart';
 export './molecules/loadings/variations/zi_linear.dart';
 
 // zi_buttons
-export './molecules/buttons/zi_fill_button.dart.dart';
-export './molecules/buttons/zi_btn_style.dart';
+export 'molecules/buttons/old/zi_btn_style.dart';
 
 // zi_bottom_bar
 export './organisms/bottom_navigation/zi_bottom_bar.dart';
 export './organisms/bottom_navigation/zi_bottom_bar_style.dart';
 export './organisms/bottom_navigation/zi_bottom_bar_type.dart';
+// import '../widgets/collection_tab.dart';
+export './collection_tab.dart';
 
 //---------------------------------//
 // Atoms

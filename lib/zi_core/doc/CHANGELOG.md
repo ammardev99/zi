@@ -22,9 +22,10 @@ Zi Software Development Plan
 
 > Zi_Architechture
 
-- zi_name_style     // can follow same design system
-- zi_name_type      // can use in diffrent cases
-- zi_get_name       // get used by main public widget
+- zi_name_style     // can follow same design system or override by pass call time
+- zi_name_type      // can use in diffrent varients
+- zi_get_name       // used to get base in cases
+- zi_name       // get used by main public widget
 - zi_name_variant   // can be diffrent layout
 architecture → consistency = maintainability.
 - Visual
@@ -52,6 +53,52 @@ architecture → consistency = maintainability.
   - zi_empty_state.dart
   - zi_error_state.dart
   - zi_loading_state.dart
+
+---
+
+> 30 Jan 2026
+
+### Buttons
+
+`add`
+
+- New `ZiButtonB` system with multiple variants:
+  - `primary`, `secondary`, `outline`, `text`, `icon`, `iconFillCircular`, `chip`, `destructive`
+- `ZiButtonStyleB` allows centralized styling and overrides
+- `ZiGetButtonB` centralizes button creation per variant
+- Demo usage in `view_buttons.dart` with Row / Wrap
+
+`Removed`
+
+- Old button files (`zi_button.dart`, `zi_fill_button.dart`, `zi_gradient_btn.dart`, `zi_icon_btn.dart`, `zi_icon_text_btn.dart`, `zi_outline_btn.dart`, `zi_text_btn.dart`)
+- Old button style and enum files
+
+`Changed`
+
+- Updated views (`view_buttons.dart`, `view_loadings.dart`, `zi_collection.dart`) to use new button system
+- Updated `tap_action.dart` and `zi_widgets_io.dart` as required for new buttons
+
+`[Zi Core] Theme Freeze`
+
+Foundations QA (colors, spacing, radius, elevation, typography)
+
+    - Canonical spacing scale and layout tokens
+    - Semantic elevation + shadow mapping
+    - Unified radius system with component aliases
+    - Expanded typography hierarchy (display, title, body, label)
+    - Input, caption, and meta text styles
+
+`Improved`
+
+    - Alignment with Material 3, One UI, and Polaris
+    - Clear separation of tokens vs components
+    - Better scalability for web and large screens
+
+`Compatibility`
+
+    - No breaking changes
+    - Existing widgets remain functional
+    - Legacy text styles mapped internally
 
 > 29 Jan 2026
 

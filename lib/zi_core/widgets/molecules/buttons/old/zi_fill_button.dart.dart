@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../../zi_core_io.dart';
 
+import '../../../../zi_core_io.dart';
 
+// TODO: @Deprecated("ZiFillButton")
 class ZiFillButton extends StatelessWidget {
   final String label;
   final ZiTapAction? onAction;
@@ -18,10 +19,10 @@ class ZiFillButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final s = style ?? ZiBtnStyle.fill();
+    final s = style;
 
     final btn = Material(
-      color: s.backgroundColor ?? ZiColors.primary,
+      color: s!.backgroundColor ?? ZiColors.primary,
       borderRadius: s.borderRadius,
       child: InkWell(
         onTap: () => onAction!.execute(context),

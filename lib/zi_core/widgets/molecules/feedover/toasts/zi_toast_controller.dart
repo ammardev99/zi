@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'zi_toast.dart';
 import 'zi_toast_type.dart';
 
-// TODO: position implementation
 class ZiToastController {
   static void show(
     BuildContext context, {

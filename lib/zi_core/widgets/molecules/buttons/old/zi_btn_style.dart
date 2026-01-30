@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../zi_core_io.dart';
+
+import '../../../../zi_core_io.dart';
 
 enum ZiGradientDirection { topToBottom, leftToRight, topLeftToBottomRight }
 
@@ -35,7 +36,9 @@ class ZiBtnStyle {
     this.width,
     this.height,
     this.padding,
-    this.borderRadius = const BorderRadius.all(Radius.circular(ZiRadius.button)),
+    this.borderRadius = const BorderRadius.all(
+      Radius.circular(ZiRadius.button),
+    ),
     this.backgroundColor,
     this.foregroundColor,
     this.borderColor,
