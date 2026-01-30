@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zi/zi_view/collection/view_tabs.dart';
 import '../zi_core/zi_core_io.dart';
 import 'zi_view_io.dart';
 
@@ -19,6 +20,7 @@ class ZiCollection extends StatelessWidget {
           CollectionTab(label: "Bottom Bar Page", page: ViewBottomBars()),
           CollectionTab(label: "FeedOver", page: ViewFeedOver()),
           CollectionTab(label: "Selections", page: ViewSelections()),
+          CollectionTab(label: "Tabs", page: ViewTabs()),
           CollectionTab(label: "Test Page", page: ViewTestPage()),
           CollectionTab(label: "Test Page", page: ViewTestPage()),
           CollectionTab(label: "Test Page", page: ViewTestPage()),
