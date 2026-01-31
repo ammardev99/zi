@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zi/zi_core/widgets/molecules/buttons/old/zi_fill_button.dart.dart';
+import 'package:zi/zi_core/widgets/molecules/buttons/old/zi_fill_button.dart';
 
 import '../../zi_core/zi_core_io.dart';
 
@@ -9,7 +9,7 @@ class ViewLoadings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ZiScaffold(
-      appBar: ZiAppBar(title: "Zi Loadings"),
+      appBar: ZiAppBarB(title: "Zi Loadings"),
       body: ListView(
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: [

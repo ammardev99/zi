@@ -9,7 +9,7 @@ class ViewTestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ZiScaffold(
-      appBar: ZiAppBar(title: "Test Page"),
+      appBar: ZiAppBarB(title: "Test Page"),
       body: Column(
         children: [
           AnimatedContainer(

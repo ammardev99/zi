@@ -10,7 +10,7 @@ class ViewButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ZiScaffold(
-      appBar: ZiAppBar(title: "ZiButtons Preview"),
+      appBar: ZiAppBarB(title: "ZiButtons Preview"),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [

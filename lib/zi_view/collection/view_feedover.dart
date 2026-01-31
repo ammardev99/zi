@@ -19,7 +19,7 @@ class ViewFeedOver extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ZiScaffold(
-      appBar: ZiAppBar(title: "FeedOver"),
+      appBar: ZiAppBarB(title: "FeedOver"),
       body: Column(
         children: [
           SizedBox(height: 10),

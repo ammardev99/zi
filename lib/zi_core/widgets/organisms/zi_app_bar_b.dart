@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../theme/zi_theme_io.dart';
 
-class ZiAppBar extends StatelessWidget implements PreferredSizeWidget {
+class ZiAppBarB extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final List<Widget>? actions;
   final bool centerTitle;
 
-  const ZiAppBar({
+  const ZiAppBarB({
     super.key,
     required this.title,
     this.actions,

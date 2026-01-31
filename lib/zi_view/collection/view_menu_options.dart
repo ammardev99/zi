@@ -20,7 +20,7 @@ class _MenuOptionsState extends State<MenuOptions> {
   @override
   Widget build(BuildContext context) {
     return ZiScaffold(
-      appBar: ZiAppBar(title: "Menu Options"),
+      appBar: ZiAppBarB(title: "Menu Options"),
       body: ListView(
         shrinkWrap: true,
         children: [

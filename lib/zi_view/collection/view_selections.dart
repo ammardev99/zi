@@ -18,7 +18,7 @@ class _ViewSelectionsState extends State<ViewSelections> {
     String gender = "M";
     bool darkMode = false;
     return ZiScaffold(
-      appBar: ZiAppBar(title: "Selections"),
+      appBar: ZiAppBarB(title: "Selections"),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: Column(

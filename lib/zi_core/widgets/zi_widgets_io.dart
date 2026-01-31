@@ -2,8 +2,7 @@
 
 // Organisms widgets
 export 'organisms/zi_scaffold.dart';
-export 'organisms/zi_app_bar.dart';
-export 'organisms/zi_bottom_nav.dart';
+export 'organisms/zi_app_bar_b.dart';
 export 'organisms/zi_tab_bar.dart';
 
 // Widgets
@@ -15,7 +14,7 @@ export 'molecules/zi_card.dart';
 export 'molecules/zi_section_header.dart';
 export './atoms/zi_section_divider.dart';
 export './molecules/zi_section_title.dart';
-export './molecules/loader_overlay/zi_loader_overlay.dart.dart';
+export 'molecules/loader_overlay/zi_loader_overlay.dart';
 // zi_menu options
 export './molecules/menu_options/menu_group.dart';
 export './molecules/menu_options/menu_tile1.dart';
