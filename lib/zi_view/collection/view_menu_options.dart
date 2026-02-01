@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zi/zi_core/zi_core_io.dart';
+import 'package:zi_core/zi_core.dart';
 
 class MenuOptions extends StatefulWidget {
   const MenuOptions({super.key});

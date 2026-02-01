@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../zi_core/widgets/molecules/buttons_b/zi_get_btn.dart';
-import '../../zi_core/widgets/molecules/buttons_b/zi_btn_style.dart';
-import '../../zi_core/zi_core_io.dart';
+import 'package:zi_core/zi_core.dart';
 
 class ViewButtons extends StatelessWidget {
   const ViewButtons({super.key});

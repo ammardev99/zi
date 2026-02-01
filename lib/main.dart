@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:zi/zi_core/theme/zi_theme_io.dart';
-
 import 'zi_view/zi_collection.dart';
+import 'package:zi_core/zi_core.dart'; // Best practice barrel export
 
 void main() {
+  assert(() {
+    debugPrint(ziCoreHealth());
+    return true;
+  }());
+
   runApp(const MyApp());
 }
 
@@ -16,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: ZiColors.primary),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
       home: ZiCollection(),
     );

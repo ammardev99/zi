@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zi/zi_core/widgets/molecules/buttons/old/zi_fill_button.dart';
-
-import '../../zi_core/zi_core_io.dart';
+import 'package:zi_core/zi_core.dart';
 
 class ViewLoadings extends StatelessWidget {
   const ViewLoadings({super.key});

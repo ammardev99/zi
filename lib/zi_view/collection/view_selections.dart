@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zi/zi_core/widgets/molecules/forms/selections/zi_checkbox.dart';
-import 'package:zi/zi_core/widgets/molecules/forms/selections/zi_radio.dart';
-import 'package:zi/zi_core/widgets/molecules/forms/selections/zi_switch.dart';
-import 'package:zi/zi_core/zi_core_io.dart';
+import 'package:zi_core/zi_core.dart';
 
 class ViewSelections extends StatefulWidget {
   const ViewSelections({super.key});

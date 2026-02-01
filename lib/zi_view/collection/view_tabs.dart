@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zi/zi_core/widgets/organisms/app_bars/zi_tab_bar.dart';
-import 'package:zi/zi_core/widgets/organisms/app_bars/zi_tabs.dart';
-
-import '../../zi_core/widgets/organisms/app_bars/zi_app_bar.dart';
+import 'package:zi_core/zi_core.dart';
 
 class ViewTabs extends StatefulWidget {
   const ViewTabs({super.key});
@@ -55,7 +52,7 @@ class _ViewTabsState extends State<ViewTabs>
         actions: [
           IconButton(
             icon: const Icon(Icons.filter_alt_outlined),
-            onPressed: (){},
+            onPressed: () {},
             // onPressed: _openStatusFilter,
           ),
         ],

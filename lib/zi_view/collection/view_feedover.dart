@@ -1,15 +1,6 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:zi/zi_core/widgets/molecules/buttons_b/zi_get_btn.dart';
-import 'package:zi/zi_core/widgets/molecules/feedover/bottom_sheets/zi_action_sheet.dart';
-import 'package:zi/zi_core/widgets/molecules/feedover/bottom_sheets/zi_bottom_sheet.dart';
-import 'package:zi/zi_core/widgets/molecules/feedover/dialogs/zi_alert_dialog.dart';
-import 'package:zi/zi_core/widgets/molecules/feedover/dialogs/zi_confirm_dialog.dart';
-import 'package:zi/zi_core/widgets/molecules/feedover/snackbars/zi_snackbar_type.dart';
-import 'package:zi/zi_core/widgets/molecules/feedover/toasts/zi_toast_type.dart';
-import 'package:zi/zi_core/zi_core_io.dart';
-
-import '../../zi_core/widgets/molecules/feedover/zi_feedback.dart';
+import 'package:zi_core/zi_core.dart';
 
 // ignore: must_be_immutable
 class ViewFeedOver extends StatelessWidget {
@@ -32,16 +23,16 @@ class ViewFeedOver extends StatelessWidget {
                 variant: ZiButtonVariantB.secondary,
                 label: "error",
                 onTap: () {
-                    // Bottom Sheet
-                    ZiBottomSheet.show(
-                      context,
-                      child: ZiActionSheet(
-                        actions: [
-                          ListTile(title: Text("Edit")),
-                          ListTile(title: Text("Delete")),
-                        ],
-                      ),
-                    );
+                  // Bottom Sheet
+                  ZiBottomSheet.show(
+                    context,
+                    child: ZiActionSheet(
+                      actions: [
+                        ListTile(title: Text("Edit")),
+                        ListTile(title: Text("Delete")),
+                      ],
+                    ),
+                  );
                 },
               ),
 
@@ -50,12 +41,12 @@ class ViewFeedOver extends StatelessWidget {
                 variant: ZiButtonVariantB.secondary,
                 label: "error",
                 onTap: () async {
-                    // Confirm
-                    await ZiConfirmDialog.show(
-                      context,
-                      title: "Delete",
-                      message: "Are you sure?",
-                    );
+                  // Confirm
+                  await ZiConfirmDialog.show(
+                    context,
+                    title: "Delete",
+                    message: "Are you sure?",
+                  );
                 },
               ),
 
@@ -64,14 +55,12 @@ class ViewFeedOver extends StatelessWidget {
                 variant: ZiButtonVariantB.secondary,
                 label: "error",
                 onTap: () {
-                    // Alert
-                    ZiAlertDialog.show(
-                      context,
-                      title: "Error",
-                      message: "Something went wrong",
-                    );
-                  
-
+                  // Alert
+                  ZiAlertDialog.show(
+                    context,
+                    title: "Error",
+                    message: "Something went wrong",
+                  );
                 },
               ),
 
@@ -80,11 +69,11 @@ class ViewFeedOver extends StatelessWidget {
                 variant: ZiButtonVariantB.secondary,
                 label: "error",
                 onTap: () {
-                    ZiFeedback.snackbar(
-                      context,
-                      message: "Will not back",
-                      type: ZiSnackbarType.warning,
-                    );
+                  ZiFeedback.snackbar(
+                    context,
+                    message: "Will not back",
+                    type: ZiSnackbarType.warning,
+                  );
                 },
               ),
 
@@ -93,13 +82,13 @@ class ViewFeedOver extends StatelessWidget {
                 variant: ZiButtonVariantB.secondary,
                 label: "error",
                 onTap: () {
-                    ZiFeedback.snackbar(
-                      context,
-                      message: "File Added",
-                      type: ZiSnackbarType.success,
-                      actionLabel: "Undo",
-                      onAction: () {},
-                    );
+                  ZiFeedback.snackbar(
+                    context,
+                    message: "File Added",
+                    type: ZiSnackbarType.success,
+                    actionLabel: "Undo",
+                    onAction: () {},
+                  );
                 },
               ),
 
@@ -108,13 +97,13 @@ class ViewFeedOver extends StatelessWidget {
                 variant: ZiButtonVariantB.secondary,
                 label: "error",
                 onTap: () {
-                    ZiFeedback.snackbar(
-                      context,
-                      message: "Edit Profile",
-                      type: ZiSnackbarType.info,
-                      actionLabel: "Undo",
-                      onAction: () {},
-                    );
+                  ZiFeedback.snackbar(
+                    context,
+                    message: "Edit Profile",
+                    type: ZiSnackbarType.info,
+                    actionLabel: "Undo",
+                    onAction: () {},
+                  );
                 },
               ),
 
@@ -125,26 +114,26 @@ class ViewFeedOver extends StatelessWidget {
                 variant: ZiButtonVariantB.secondary,
                 label: "error",
                 onTap: () {
-                    ZiFeedback.snackbar(
-                      context,
-                      message: "No internet connection",
-                      type: ZiSnackbarType.error,
-                      actionLabel: "Retry",
-                      onAction: () {},
-                    );
+                  ZiFeedback.snackbar(
+                    context,
+                    message: "No internet connection",
+                    type: ZiSnackbarType.error,
+                    actionLabel: "Retry",
+                    onAction: () {},
+                  );
                 },
               ),
-Divider(),
+              Divider(),
               SizedBox(width: 4),
               ZiGetButtonB.get(
                 variant: ZiButtonVariantB.secondary,
                 label: "warning",
                 onTap: () {
-                    ZiFeedback.toast(
-                      context,
-                      message: "Toast Message here",
-                      type: ZiToastType.warning,
-                    );
+                  ZiFeedback.toast(
+                    context,
+                    message: "Toast Message here",
+                    type: ZiToastType.warning,
+                  );
                 },
               ),
 
@@ -153,11 +142,11 @@ Divider(),
                 variant: ZiButtonVariantB.secondary,
                 label: "success",
                 onTap: () {
-                    ZiFeedback.toast(
-                      context,
-                      message: "Toast Message here",
-                      type: ZiToastType.success,
-                    );
+                  ZiFeedback.toast(
+                    context,
+                    message: "Toast Message here",
+                    type: ZiToastType.success,
+                  );
                 },
               ),
 
@@ -166,11 +155,11 @@ Divider(),
                 variant: ZiButtonVariantB.secondary,
                 label: "info",
                 onTap: () {
-                    ZiFeedback.toast(
-                      context,
-                      message: "Toast Message here",
-                      type: ZiToastType.info,
-                    );
+                  ZiFeedback.toast(
+                    context,
+                    message: "Toast Message here",
+                    type: ZiToastType.info,
+                  );
                 },
               ),
 

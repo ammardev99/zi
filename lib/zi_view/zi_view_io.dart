@@ -7,3 +7,4 @@ export './collection/view_menu_options.dart';
 export './collection/view_selections.dart';
 export './collection/view_test.dart';
 export './collection/zi_forms.dart';
+export './collection/view_tabs.dart';
