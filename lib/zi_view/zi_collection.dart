@@ -21,12 +21,13 @@ class ZiCollection extends StatelessWidget {
           CollectionTab(label: "Tabs", page: ViewTabs()),
           CollectionTab(label: "Selections", page: ViewSelections()),
           CollectionTab(label: "FeedOver", page: ViewFeedOver()),
-          CollectionTab(label: "Test Page", page: ViewTestPage()),
+          CollectionTab(label: "Media Images", page: ViewMediaImagesPage()),
+          CollectionTab(label: "Typography", page: TypographyPage()),
+          CollectionTab(label: "Theme Colors", page: ThemeColorsPage()),
           CollectionTab(label: "Test Page", page: ViewTestPage()),
           // CollectionTab(label: "Zi Shell", page: SplashScreen()),
           Divider(),
-          // Text(ziCoreHealth())
-          ziCoreHealthShow(),
+          Text(ziCoreHealth(type: ZiCoreHealthType.patch)),
         ],
       ),
     );

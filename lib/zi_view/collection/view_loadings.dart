@@ -74,41 +74,39 @@ class ViewLoadings extends StatelessWidget {
               ),
             ),
           ),
-
-          ZiFillButton(
+          ZiButtonB(
             label: 'Login',
-            onAction: ZiTapAction(
-              type: ZiTapActionType.custom,
-              onTap: () {
-                ZiOverlayLoader.show(context, type: ZiOverlayType.loading);
-                Future.delayed(const Duration(seconds: 2), () {
-                  // ignore: use_build_context_synchronously
-                  ZiOverlayLoader.hide(context);
-                });
-              },
-            ),
+            action:
+                () => ZiTapAction(
+                  type: ZiTapActionType.custom,
+                  onTap: () {
+                    ZiOverlayLoader.show(context, type: ZiOverlayType.loading);
+                    Future.delayed(const Duration(seconds: 2), () {
+                      // ignore: use_build_context_synchronously
+                      ZiOverlayLoader.hide(context);
+                    });
+                  },
+                ),
           ),
-
-          ZiFillButton(
-            label: "acll",
-            onAction: ZiTapAction(
-              type: ZiTapActionType.custom,
-              onTap: () {
-                ZiOverlayLoader.show(
-                  context,
-                  visual: ZiOverlayVisual.circularWithText,
-                  message: 'Signing in...',
-                );
-                Future.delayed(const Duration(seconds: 3), () {
-                  // show status
-                  // ignore: use_build_context_synchronously
-                  ZiOverlayLoader.hide(context);
-                });
-              },
-            ),
+          ZiButtonB(
+            label: "call",
+            action:
+                () => ZiTapAction(
+                  type: ZiTapActionType.custom,
+                  onTap: () {
+                    ZiOverlayLoader.show(
+                      context,
+                      visual: ZiOverlayVisual.circularWithText,
+                      message: 'Signing in...',
+                    );
+                    Future.delayed(const Duration(seconds: 3), () {
+                      // show status
+                      // ignore: use_build_context_synchronously
+                      ZiOverlayLoader.hide(context);
+                    });
+                  },
+                ),
           ),
-          // ZiPrimaryButton(
-          // )
         ],
       ),
     );

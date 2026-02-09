@@ -1,7 +1,8 @@
 // add pkg flutter pub add awesome_bottom_bar
-import 'package:flutter/material.dart';
-import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
+// import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
+
 import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
+import 'package:flutter/material.dart';
 import 'package:zi_core/zi_core.dart';
 
 const List<TabItem> items = [
@@ -23,10 +24,10 @@ class ViewBottomBars extends StatefulWidget {
 class _ViewBottomBarsState extends State<ViewBottomBars> {
   int visit = 0;
   double height = 30;
-  Color colorSelect = const Color(0XFF0686F8);
-  Color color = const Color(0XFF7AC0FF);
-  Color color2 = const Color(0XFF96B1FD);
-  Color bgColor = const Color(0XFF1752FE);
+  Color colorSelect = ZiColors.primary;
+  Color color = ZiColors.border;
+  Color color2 = ZiColors.grayLight;
+  Color bgColor = ZiColors.primary;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -266,7 +267,7 @@ class _ViewBottomBarsState extends State<ViewBottomBars> {
               items: items,
               backgroundColor: Colors.amber,
               color: Colors.grey,
-              colorSelected: Colors.blue,
+              colorSelected: ZiColors.primary,
               indexSelected: visit,
               onTap:
                   (index) => setState(() {

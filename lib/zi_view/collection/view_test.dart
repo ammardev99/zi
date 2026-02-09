@@ -11,7 +11,7 @@ class ViewTestPage extends StatelessWidget {
       body: Column(
         children: [
           // AnimatedContainer(
-          // TODO: update requried
+          // later - update requried
           //   duration: ZiMotion.normal,
           //   curve: ZiMotion.standard,
           // ),

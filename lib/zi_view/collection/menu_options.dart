@@ -53,6 +53,14 @@ class _MenuOptionsState extends State<MenuOptions> {
                 label: "Settings",
                 action: openTestPage,
               ),
+              ZiMenuTile1(
+                icon: Icons.copy,
+                label: "Copy",
+                action: ZiTapAction(
+                  type: ZiTapActionType.copy,
+                  text: "Hello 99",
+                ),
+              ),
             ],
           ),
 

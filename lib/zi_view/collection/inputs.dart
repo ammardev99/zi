@@ -36,7 +36,6 @@ class ViewZiInputs extends StatelessWidget {
               style: ZiInputStyle(),
               variant: ZiInputVariant.filled,
             ),
-
             _gap(),
             ZiInput(
               label: 'Username',
@@ -183,6 +182,21 @@ class ViewZiInputs extends StatelessWidget {
               label: 'Phone',
               hint: '+92 3xx xxxxxxx',
               variant: ZiInputVariant.underlined,
+            ),
+            _gap(),
+            ZiInput(
+              label: 'Notes',
+              hint: 'Enter note detiles here',
+              prefix: Icon(Icons.note_alt_rounded),
+              variant: ZiInputVariant.outline,
+              type: ZiInputType.multiline,
+            ),
+            _gap(),
+            ZiInput(
+              label: 'Tasks',
+              hint: 'Enter Task here',
+              variant: ZiInputVariant.stacked,
+              type: ZiInputType.multiline,
             ),
           ],
         ),
