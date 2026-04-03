@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:zi_core/zi_core.dart';
+import 'package:zi_core/zi_core_io.dart';
 
 class ThemeColorsPage extends StatelessWidget {
   const ThemeColorsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ZiScaffold(
-      appBar: ZiAppBarB(title: "Test Page"),
+    return ZiScaffoldB(
+      appBar: AppBar(),
       body: Column(
         children: [
           colorsCard("primary", ZiColors.primary),

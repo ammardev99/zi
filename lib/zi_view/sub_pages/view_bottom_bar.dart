@@ -3,7 +3,8 @@
 
 import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
 import 'package:flutter/material.dart';
-import 'package:zi_core/zi_core.dart';
+import 'package:zi_core/zi_core_io.dart';
+
 
 const List<TabItem> items = [
   TabItem(icon: Icons.home, title: 'Home'),
@@ -31,7 +32,7 @@ class _ViewBottomBarsState extends State<ViewBottomBars> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(" Bottom Bar Collection")),
+      // appBar: AppBar(title: Text(" Bottom Bar Collection")),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
@@ -305,21 +306,21 @@ class _ViewBottomBarsState extends State<ViewBottomBars> {
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        padding: const EdgeInsets.only(bottom: 15, right: 15, left: 15),
-        child: BottomBarFloating(
-          items: items,
-          backgroundColor: Colors.black.withValues(alpha: 0.8),
-          color: Colors.white,
-          colorSelected: Colors.orange,
-          indexSelected: visit,
-          paddingVertical: 24,
-          onTap:
-              (int index) => setState(() {
-                visit = index;
-              }),
-        ),
-      ),
+      // bottomNavigationBar: Container(
+      //   padding: const EdgeInsets.only(bottom: 15, right: 15, left: 15),
+      //   child: BottomBarFloating(
+      //     items: items,
+      //     backgroundColor: Colors.black.withValues(alpha: 0.1),
+      //     color: Colors.white,
+      //     colorSelected: Colors.orange,
+      //     indexSelected: visit,
+      //     paddingVertical: 24,
+      //     onTap:
+      //         (int index) => setState(() {
+      //           visit = index;
+      //         }),
+      //   ),
+      // ),
     );
   }
 }

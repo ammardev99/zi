@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:zi_core/zi_core.dart';
+import 'package:zi_core/zi_core_io.dart';
+
 
 class ViewLoadings extends StatelessWidget {
   const ViewLoadings({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ZiScaffold(
-      appBar: ZiAppBarB(title: "Zi Loadings"),
+    return ZiScaffoldB(
+      // appBar: ZiAppBarB(title: "Zi Loadings"),
       body: ListView(
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zi_core/zi_core.dart';
+import 'package:zi_core/zi_core_io.dart';
 
 class MenuOptions extends StatefulWidget {
   const MenuOptions({super.key});
@@ -19,8 +19,8 @@ class _MenuOptionsState extends State<MenuOptions> {
 
   @override
   Widget build(BuildContext context) {
-    return ZiScaffold(
-      appBar: ZiAppBarB(title: "Menu Options"),
+    return ZiScaffoldB(
+      // appBar: ZiAppBarB(title: "Menu Options"),
       body: ListView(
         shrinkWrap: true,
         children: [

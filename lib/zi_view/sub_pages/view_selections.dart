@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zi_core/zi_core.dart';
+import 'package:zi_core/zi_core_io.dart';
+
 
 class ViewSelections extends StatefulWidget {
   const ViewSelections({super.key});
@@ -14,8 +15,8 @@ class _ViewSelectionsState extends State<ViewSelections> {
     bool agree = false;
     String gender = "M";
     bool darkMode = false;
-    return ZiScaffold(
-      appBar: ZiAppBarB(title: "Selections"),
+    return ZiScaffoldB(
+      // appBar: ZiAppBarB(title: "Selections"),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: Column(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zi_core/zi_core.dart';
 
 class ViewTabs extends StatefulWidget {
   const ViewTabs({super.key});
@@ -46,25 +45,27 @@ class _ViewTabsState extends State<ViewTabs>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: ZiAppBar(
-        title: 'Zi Components',
-        leadingType: ZiLeadingType.back,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.filter_alt_outlined),
-            onPressed: () {},
-            // onPressed: _openStatusFilter,
-          ),
-        ],
-        bottom: ZiTabBar(
-          controller: _tabController,
-          tabs: const [
-            ZiTab(label: 'Overview', icon: Icons.dashboard),
-            ZiTab(label: 'Orders', icon: Icons.shopping_bag),
-            ZiTab(label: 'Settings', icon: Icons.settings),
-          ],
-        ),
-      ),
+      // appBar: ZiAppBarB(
+      //   title: 'Zi Components',
+      //   // leadingType: ZiLeadingType.back,
+      //   actions: [
+      //     IconButton(
+      //       icon: const Icon(Icons.filter_alt_outlined),
+      //       onPressed: () {},
+      //       // onPressed: _openStatusFilter,
+      //     ),
+      //   ],
+      //   //DO:
+      //   // bottom:
+      //   // ZiTabBar(
+      //   //   controller: _tabController,
+      //   //   tabs: const [
+      //   //     ZiTab(label: 'Overview', icon: Icons.dashboard),
+      //   //     ZiTab(label: 'Orders', icon: Icons.shopping_bag),
+      //   //     ZiTab(label: 'Settings', icon: Icons.settings),
+      //   //   ],
+      //   // ),
+      // ),
       body: TabBarView(
         controller: _tabController,
         children: [_overviewTab(), _ordersTab(), _settingsTab()],

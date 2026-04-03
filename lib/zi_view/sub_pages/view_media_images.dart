@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:zi_core/zi_core.dart';
+import 'package:zi_core/zi_core_io.dart';
+
 
 class ViewMediaImagesPage extends StatelessWidget {
   const ViewMediaImagesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ZiScaffold(
-      appBar: ZiAppBarB(title: "Test Page"),
+    return ZiScaffoldB(
+      // appBar: ZiAppBarB(title: "Test Page"),
 
-      body: Column(
+      body: ListView(
+        shrinkWrap: true,
         children: [
           SectionDivider(label: "label"),
-          // TODO: add images use cases
+          // DO: add images use cases
           ZiImage(path: "path", type: ZiImageType.asset),
           ZiImage(
             path: "path",

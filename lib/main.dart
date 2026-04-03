@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
-import 'zi_view/zi_collection.dart';
-import 'package:zi_core/zi_core.dart'; // Best practice barrel export
+import 'package:zi/web_view/site/web_collection.dart';
+import 'package:zi_core/zi_core_io.dart'; // Best practice barrel export
 
 void main() {
-  debugPrint(ziCoreHealth(type: ZiCoreHealthType.patch));
-  // ZiColorOverrides(
-  //   primary: Colors.purple,
-  //   secondary: Colors.red,
-  //   tertiary: Colors.yellow,
-  // );
-
+  ZiStatusToast.navigatorKey;
   ZiColors.override(
     ZiColorOverrides(
-      primary: Colors.purple,
-      secondary: Colors.red,
-      tertiary: Colors.yellow,
+      primary: const Color(0xFFBD00FF),
+      secondary: const Color(0xFF5F0080),
     ),
   );
 
@@ -27,11 +20,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home: ZiCollection(),
+      // home: ZiCollection(),
+      home: WebCollection(),
     );
   }
 }

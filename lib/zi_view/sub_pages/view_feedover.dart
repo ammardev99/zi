@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zi_core/zi_core.dart';
+import 'package:zi_core/zi_core_io.dart';
+
 
 // ignore: must_be_immutable
 class ViewFeedOver extends StatelessWidget {
@@ -8,8 +9,8 @@ class ViewFeedOver extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ZiScaffold(
-      appBar: ZiAppBarB(title: "FeedOver"),
+    return ZiScaffoldB(
+      // appBar: ZiAppBarB(title: "FeedOver"),
       body: Column(
         children: [
           SizedBox(height: 10),
@@ -23,8 +24,10 @@ class ViewFeedOver extends StatelessWidget {
                 label: "error",
                 onTap: () {
                   // Bottom Sheet
+                  // ignore: deprecated_member_use
                   ZiBottomSheet.show(
                     context,
+                    // ignore: deprecated_member_use
                     child: ZiActionSheet(
                       actions: [
                         ListTile(title: Text("Edit")),
@@ -41,6 +44,7 @@ class ViewFeedOver extends StatelessWidget {
                 label: "error",
                 onTap: () async {
                   // Confirm
+                  // ignore: deprecated_member_use
                   await ZiConfirmDialog.show(
                     context,
                     title: "Delete",
@@ -55,11 +59,11 @@ class ViewFeedOver extends StatelessWidget {
                 label: "error",
                 onTap: () {
                   // Alert
-                  ZiAlertDialog.show(
-                    context,
-                    title: "Error",
-                    message: "Something went wrong",
-                  );
+                  // ZiAlertDialog.show(
+                  //   context,
+                  //   title: "Error",
+                  //   message: "Something went wrong",
+                  // );
                 },
               ),
 
@@ -176,23 +180,23 @@ class ViewFeedOver extends StatelessWidget {
           SizedBox(height: 10),
         ],
       ),
-      bottomNavigationBar: ZiBottomBar(
-        items: [
-          TabItem(icon: Icons.add),
-          TabItem(icon: Icons.home),
-          TabItem(icon: Icons.menu),
-        ],
-        currentIndex: currentIndex,
-        onTap: (value) {
-          currentIndex = value;
-        },
-        type: ZiBottomBarType.creative,
-        style: ZiBottomBarStyle(
-          backgroundColor: Colors.pink,
-          color: Colors.deepOrange,
-          colorSelected: Colors.purple,
-        ),
-      ),
+      // bottomNavigationBar: ZiBottomBar(
+      //   items: [
+      //     TabItem(icon: Icons.add),
+      //     TabItem(icon: Icons.home),
+      //     TabItem(icon: Icons.menu),
+      //   ],
+      //   currentIndex: currentIndex,
+      //   onTap: (value) {
+      //     currentIndex = value;
+      //   },
+      //   type: ZiBottomBarType.creative,
+      //   style: ZiBottomBarStyle(
+      //     backgroundColor: Colors.pink,
+      //     color: Colors.deepOrange,
+      //     colorSelected: Colors.purple,
+      //   ),
+      // ),
     );
   }
 }

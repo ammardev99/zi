@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:zi_core/zi_core.dart';
+import 'package:zi_core/zi_core_io.dart';
+
 
 class TypographyPage extends StatelessWidget {
   const TypographyPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ZiScaffold(
-      appBar: ZiAppBarB(title: "Test Page"),
+    return ZiScaffoldB(
+      // appBar: ZiAppBarB(title: "Test Page"),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

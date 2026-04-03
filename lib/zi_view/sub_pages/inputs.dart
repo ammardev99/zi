@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zi_core/zi_core.dart';
+import 'package:zi_core/zi_core_io.dart';
+
 
 class ViewZiInputs extends StatelessWidget {
   const ViewZiInputs({super.key});
@@ -7,7 +8,7 @@ class ViewZiInputs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Zi Inputs')),
+      // appBar: AppBar(title: const Text('Zi Inputs')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
