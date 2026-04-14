@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:zi/web_view/sections/header.dart';
-import 'package:zi/web_view/site/components/tabs.dart.dart';
-import '../components/web_sidebar_left.dart';
-import '../components/web_sidebar_right.dart';
-import '../components/web_content_area.dart';
+import 'package:zi/web_view/site/web_components/tabs.dart.dart';
+import '../web_components/sidebar_left_web.dart';
+import '../web_components/web_sidebar_right.dart';
+import '../web_components/web_content_area.dart';
 
 class WebDesktopLayout extends StatelessWidget {
   final int selectedIndex;

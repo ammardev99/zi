@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zi/web_view/sections/header.dart';
-import 'package:zi/web_view/site/components/tabs.dart.dart';
+import 'package:zi/web_view/site/web_components/tabs.dart.dart';
 import 'package:zi_core/zi_core_io.dart';
 
 class WebMobileLayout extends StatelessWidget {

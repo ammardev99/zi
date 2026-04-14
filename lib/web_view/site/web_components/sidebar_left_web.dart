@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zi/web_view/site/components/tabs.dart.dart';
+import 'package:zi/web_view/site/web_components/tabs.dart.dart';
 import 'package:zi/widgets/content_body.dart';
 import 'package:zi/widgets/utiles.dart';
 
