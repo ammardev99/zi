@@ -1,11 +1,11 @@
 export 'sub_pages/elevated_actions_view.dart';
 export 'sub_pages/view_bottom_bar.dart';
-export 'sub_pages/view_buttons.dart';
+export '../zi_collections/buttons.dart';
 export 'sub_pages/view_feedover.dart';
 export '../zi_collections/inputs.dart';
 export 'sub_pages/view_loadings.dart';
 export 'sub_pages/menu_options.dart';
-export 'sub_pages/view_selections.dart';
+export '../zi_collections/selections.dart';
 export 'sub_pages/view_test.dart';
 export 'sub_pages/zi_forms.dart';
 export 'sub_pages/view_tabs.dart';
