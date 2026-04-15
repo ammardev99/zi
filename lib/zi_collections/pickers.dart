@@ -20,12 +20,7 @@ class _ZiPickersViewState extends State<ZiPickersView> {
     return ZiScaffoldB(
       body: ListView(
         children: [
-          ZiMenuTile1(
-            label: "label",
-            action: ZiTapAction(type: ZiTapActionType.copy),
-          ),
           const SectionDivider(label: "CORE PICKERS", isComplete: true),
-          Icon(ZiIcons.home),
           ZiInput(
             label: "Select Date: ${date?.toString()}",
             // readOnly: true,
