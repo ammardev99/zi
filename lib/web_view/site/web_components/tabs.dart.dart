@@ -8,7 +8,7 @@ final List<WebTabItem> tabOptionsList = [
   // ─────────────────────────────────────────
   // 🟢 INTRODUCTION
   // ─────────────────────────────────────────
-  WebTabItem(label: "Selections", page: ViewSelections()),
+  WebTabItem(label: "Pickers", page: ZiPickersView()),
   // ─────────────────────────────────────────
   WebTabItem(label: "About Zi Core", page: ZiAboutView()),
   // WebTabItem(label: "Welcome", page: ZiWelcomePage()), // 🔜 Add intro landing page
@@ -32,6 +32,7 @@ final List<WebTabItem> tabOptionsList = [
   // 🟡 INPUTS & FORMS
   // ─────────────────────────────────────────
   WebTabItem(label: "Inputs", page: ViewZiInputs()),
+  WebTabItem(label: "Pickers", page: ZiPickersView()),
   WebTabItem(label: "Selections", page: ViewSelections()),
   // WebTabItem(label: "Form Validation", page: ZiFormValidationPage()), // 🔜
   // WebTabItem(label: "Form Layouts", page: ZiFormLayoutsPage()), // 🔜
