@@ -57,6 +57,7 @@ final List<WebTabItem> tabOptionsList = [
   // 🟤 MEDIA
   // ─────────────────────────────────────────
   WebTabItem(label: "Images", page: ViewMediaImagesPage()),
+  WebTabItem(label: "Icons", page: IconsView()),
   // WebTabItem(label: "Icons", page: ZiIconsPage()), // 🔜
   // WebTabItem(label: "Avatars", page: ZiAvatarPage()), // 🔜
 

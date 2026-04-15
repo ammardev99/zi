@@ -20,3 +20,12 @@ class ViewTestPage extends StatelessWidget {
     );
   }
 }
+
+// view so i can seet different use of each type in row
+
+// const SectionDivider(label: "default", isComplete: true), // types
+//  r1
+// const SectionDivider(label: "loading", isComplete: true), // variations
+// r2
+// const SectionDivider(label: "Customization", isComplete: true), // mix
+// R3
