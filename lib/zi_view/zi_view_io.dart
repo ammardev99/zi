@@ -13,7 +13,7 @@ export 'sub_pages/view_media_images.dart';
 export '../zi_collections/typography.dart';
 export '../zi_collections/theme_colors.dart';
 export '../zi_collections/icons_view.dart';
-export 'sub_pages/feedstatus_view.dart';
+export 'sub_pages/snackbar_view.dart';
 export 'sub_pages/feed_over_view.dart';
 export 'sub_pages/zi_about.dart';
 

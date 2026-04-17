@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zi/doc/zi_meta.dart';
 import 'package:zi_core/zi_core_io.dart';
 
 class Header extends StatelessWidget {
@@ -16,7 +17,6 @@ class Header extends StatelessWidget {
   }
 }
 
-
 class _DesktopHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,7 @@ class _DesktopHeader extends StatelessWidget {
     );
   }
 }
+
 class _TabletHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -37,6 +38,7 @@ class _TabletHeader extends StatelessWidget {
     );
   }
 }
+
 class _MobileHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -47,6 +49,7 @@ class _MobileHeader extends StatelessWidget {
     );
   }
 }
+
 class _BaseHeaderLayout extends StatelessWidget {
   final bool isVertical;
   final TextStyle titleSize;
@@ -77,13 +80,11 @@ class _BaseHeaderLayout extends StatelessWidget {
       children: [
         Row(
           children: [
-            ZiSvgIcon(path: 'assets/logo.svg', size: 60),
+            // ZiSvgIcon(path: 'assets/logo.svg', size: 60),
+            ZiSvgIcon(path: ZiMeta.logo, size: 60),
             ziGap(10),
             Expanded(
-              child: Text(
-                "Zi_Core Development Package",
-                style: titleSize,
-              ),
+              child: Text("Zi_Core Development Package", style: titleSize),
             ),
           ],
         ),
@@ -91,7 +92,7 @@ class _BaseHeaderLayout extends StatelessWidget {
         ziGap(8),
 
         Text(
-          "Application development ecosystem | v1.0.0",
+          "${ZiMeta.domain} | ${ZiMeta.version}",
           style: ZiTypoStyles.subHeading.copyWith(color: ZiColors.gray),
         ),
 
@@ -113,13 +114,8 @@ class _BaseHeaderLayout extends StatelessWidget {
             Text("Windows"),
           ],
         ),
-
         ziGap(8),
-
-        Text(
-          "Built with Zi_Core Libraries. Manage on GitHub and we serve UI/UX ecosystem.",
-          style: ZiTypoStyles.inputHint,
-        ),
+        Text(ZiMeta.info, style: ZiTypoStyles.inputHint),
       ],
     );
   }
@@ -130,47 +126,31 @@ class _BaseHeaderLayout extends StatelessWidget {
       children: [
         Row(
           children: [
-            ZiSvgIcon(path: 'assets/logo.svg', size: 80),
+            ZiSvgIcon(path: ZiMeta.logo, size: 80),
             ziGap(10),
 
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Zi_Core Development Package",
-                  style: titleSize,
-                ),
+                Text("Zi_Core Development Package", style: titleSize),
                 ziGap(6),
                 Text(
-                  "Application development ecosystem | v1.0.0",
-                  style: ZiTypoStyles.subHeading.copyWith(
-                    color: ZiColors.gray,
-                  ),
+                  "${ZiMeta.domain} | ${ZiMeta.version}",
+                  style: ZiTypoStyles.subHeading.copyWith(color: ZiColors.gray),
                 ),
               ],
             ),
-
             const Spacer(),
-
             _buildMeta(),
           ],
         ),
 
-        ziGap(10),
-
-        Row(
-          children: [
-            Expanded(
-              child: Text(
-                "Built with Zi_Core Libraries. Manage on GitHub and we serve UI/UX, CX, DX ecosystem.",
-                style: ZiTypoStyles.inputHint,
-              ),
-            ),
-          ],
-        ),
-
-        ziGap(8),
-        Divider(color: ZiColors.border),
+        // ziGap(10),
+        // Row(
+        //   children: [
+        //     Expanded(child: Text(ZiMeta.info, style: ZiTypoStyles.inputHint)),
+        //   ],
+        // ),
       ],
     );
   }
@@ -191,18 +171,9 @@ class _BaseHeaderLayout extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Row(
-          children: [
-            _buildStars(),
-            ziGap(6),
-            const Text("4k+"),
-          ],
-        ),
+        Row(children: [_buildStars(), ziGap(6), const Text("4k+")]),
         ziGap(6),
-        if (showFullMeta)
-          const Text(
-            "Android | iOS | Web | Windows",
-          ),
+        if (showFullMeta) const Text("Android | iOS | Web | Windows"),
       ],
     );
   }

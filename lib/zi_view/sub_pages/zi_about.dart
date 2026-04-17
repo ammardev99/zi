@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zi/doc/zi_meta.dart';
 import 'package:zi_core/zi_core_io.dart';
 
 class ZiAboutView extends StatelessWidget {
@@ -104,7 +105,7 @@ class ZiAboutView extends StatelessWidget {
 
                 Center(
                   child: SelectableText(
-                    "© 2026 Zi Core. Built with Flutter. Designed for scalable applications. | v1.0.0",
+                    "© 2026 Zi Core. Built with Flutter. Designed for scalable applications. | ${ZiMeta.version} +${ZiMeta.push}",
                     style: Theme.of(context).textTheme.bodySmall,
                     textAlign: TextAlign.center,
                   ),

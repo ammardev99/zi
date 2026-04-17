@@ -8,6 +8,7 @@ void main() {
     ZiColorOverrides(
       primary: const Color(0xFFBD00FF),
       secondary: const Color(0xFF5F0080),
+      tertiary: const Color(0xFF19061B),
     ),
   );
 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zi_core/zi_core_io.dart';
 
-
 class ViewLoadings extends StatelessWidget {
   const ViewLoadings({super.key});
 
@@ -13,10 +12,14 @@ class ViewLoadings extends StatelessWidget {
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ZiSectionTag(title: "circular"),
-          ZiLoading(type: ZiLoadingType.circular),
-          // ZiLoading(type: ZiLoadingType.circular, style: ZiLoadingStyle(color: Colors.red, size: 40, strokeWidth: 6),),
-          ZiSectionTag(title: "circular Theme"),
-          ZiLoading(type: ZiLoadingType.circularTheme),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ZiLoading(type: ZiLoadingType.circular),
+              // ZiLoading(type: ZiLoadingType.circular, style: ZiLoadingStyle(color: Colors.red, size: 40, strokeWidth: 6),),
+              ZiLoading(type: ZiLoadingType.circularTheme),
+            ],
+          ),
           // ZiLoading(type: ZiLoadingType.circular, style: ZiLoadingStyle(color: Colors.red, size: 40, strokeWidth: 6),),
           ZiSectionTag(title: "linear"),
           ZiLoading(type: ZiLoadingType.linear),
@@ -26,6 +29,7 @@ class ViewLoadings extends StatelessWidget {
           //---------------------Loaging Types---------------------//
           ZiSectionTag(title: "circularPercent"),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ZiLoading(
                 type: ZiLoadingType.circularPercent,
@@ -43,8 +47,9 @@ class ViewLoadings extends StatelessWidget {
             type: ZiLoadingType.dots,
             ziLoadstyle: ZiLoadingStyle(value: 5),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 20),
           ZiLoading(type: ZiLoadingType.dotsTheme),
+          SizedBox(height: 20),
           ZiSectionTag(title: "skeleton List"),
           // list loading
           Container(
@@ -74,39 +79,6 @@ class ViewLoadings extends StatelessWidget {
                 size: 2, // ratio
               ),
             ),
-          ),
-          ZiButtonB(
-            label: 'Login',
-            action:
-                () => ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () {
-                    ZiOverlayLoader.show(context, type: ZiOverlayType.loading);
-                    Future.delayed(const Duration(seconds: 2), () {
-                      // ignore: use_build_context_synchronously
-                      ZiOverlayLoader.hide(context);
-                    });
-                  },
-                ),
-          ),
-          ZiButtonB(
-            label: "call",
-            action:
-                () => ZiTapAction(
-                  type: ZiTapActionType.custom,
-                  onTap: () {
-                    ZiOverlayLoader.show(
-                      context,
-                      visual: ZiOverlayVisual.circularWithText,
-                      message: 'Signing in...',
-                    );
-                    Future.delayed(const Duration(seconds: 3), () {
-                      // show status
-                      // ignore: use_build_context_synchronously
-                      ZiOverlayLoader.hide(context);
-                    });
-                  },
-                ),
           ),
         ],
       ),

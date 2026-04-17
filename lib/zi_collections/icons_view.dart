@@ -8,7 +8,6 @@ class IconsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ZiScaffoldB(
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

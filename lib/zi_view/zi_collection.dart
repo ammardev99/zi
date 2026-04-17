@@ -25,7 +25,7 @@ class ZiCollection extends StatelessWidget {
           CollectionTab(label: "Typography", page: TypographyPage()),
           CollectionTab(label: "Theme Colors", page: ThemeColorsPage()),
           CollectionTab(label: "Elevated Actions", page: ElevatedActionsView()),
-          CollectionTab(label: "Status Toast ", page: ZiStatusToastView()),
+          CollectionTab(label: "Status Toast ", page: ZiSnackBarView()),
           CollectionTab(label: "Test Page", page: ViewTestPage()),
           // CollectionTab(label: "Feed Over", page: FeedOverView()),
           // CollectionTab(label: "Zi Shell", page: SplashScreen()),

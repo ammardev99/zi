@@ -23,6 +23,7 @@ class WebSidebarLeft extends StatelessWidget {
           return SideTab(
             label: tabOptionsList[index].label,
             isActive: index == selectedIndex,
+            isInDev: tabOptionsList[index].isInDev ,
             onTap: () => onSelect(index),
           );
         },

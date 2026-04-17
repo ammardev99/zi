@@ -23,9 +23,10 @@ class ViewTestPage extends StatelessWidget {
 
 // view so i can seet different use of each type in row
 
-// const SectionDivider(label: "default", isComplete: true), // types
+// const SectionDivider(label: "collection type name 1", isComplete: true), // types
 //  r1
-// const SectionDivider(label: "loading", isComplete: true), // variations
+// const SectionDivider(label: "collection type name 2", isComplete: true), // variations
 // r2
-// const SectionDivider(label: "Customization", isComplete: true), // mix
+// const SectionDivider(label: "collection type or customizations name 2", isComplete: true), // mix
 // R3
+// you can add more as we can use cases and customizations

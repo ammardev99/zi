@@ -8,7 +8,9 @@ import 'package:zi_core/zi_core_io.dart';
 class WebTabItem {
   final String label;
   final Widget page;
-  WebTabItem({required this.label, required this.page});
+  final bool isInDev;
+
+  WebTabItem({required this.label, required this.page, required this.isInDev});
 }
 
 //
@@ -17,6 +19,7 @@ class SideTab extends StatelessWidget {
   final String label;
   // final Widget page;
   final bool isActive;
+  final bool isInDev;
   // onTap
   final VoidCallback onTap;
 
@@ -25,6 +28,7 @@ class SideTab extends StatelessWidget {
     required this.label,
     // required this.page,
     required this.isActive,
+    required this.isInDev,
     required this.onTap,
   });
 
@@ -44,10 +48,11 @@ class SideTab extends StatelessWidget {
           children: [
             Text(
               label,
-              style: ZiTypoStyles.bodyMedium.copyWith(
+              style: ZiTypoStyles.bodyMd.copyWith(
                 color: isActive ? Colors.white : ZiColors.textMuted,
               ),
             ),
+            if (isInDev) Icon(Icons.code, size: 18,),
           ],
         ),
       ),
@@ -78,11 +83,8 @@ class SideInfoCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: ZiTypoStyles.titleMd),
-        Text(
-          description,
-          style: ZiTypoStyles.bodyMedium,
-        ),
+        Text(title, style: ZiTypoStyles.titleSm),
+        Text(description, style: ZiTypoStyles.bodySm),
         if (isButton)
           ZiButtonB(
             label: btnLable ?? "Action",

@@ -1,10 +1,6 @@
-// add pkg flutter pub add awesome_bottom_bar
-// import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
-
 import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
 import 'package:flutter/material.dart';
 import 'package:zi_core/zi_core_io.dart';
-
 
 const List<TabItem> items = [
   TabItem(icon: Icons.home, title: 'Home'),
@@ -18,309 +14,223 @@ class ViewBottomBars extends StatefulWidget {
   const ViewBottomBars({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _ViewBottomBarsState createState() => _ViewBottomBarsState();
+  State<ViewBottomBars> createState() => _ViewBottomBarsState();
 }
 
 class _ViewBottomBarsState extends State<ViewBottomBars> {
   int visit = 0;
-  double height = 30;
-  Color colorSelect = ZiColors.primary;
-  Color color = ZiColors.border;
-  Color color2 = ZiColors.grayLight;
-  Color bgColor = ZiColors.primary;
+
+  final double gap = 30;
+
+  Color get bg => ZiColors.primary;
+  Color get unselected => ZiColors.grayLight;
+  Color get selected => Colors.white;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(title: Text(" Bottom Bar Collection")),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
         child: Column(
           children: [
-            SectionDivider(label: "Intresting Bottom Bars"),
+            /// =========================
+            /// OUTSIDE (FLOATING / NOTCH)
+            /// =========================
+            const SectionDivider(label: "Inspired - Outside", isComplete: true),
 
-            SizedBox(height: height),
-            //1
-            BottomBarInspiredOutside(
-              items: items,
-              backgroundColor: bgColor,
-              color: color2,
-              colorSelected: Colors.white,
-              indexSelected: visit,
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-              top: -25,
-              animated: true,
-              itemStyle: ItemStyle.hexagon,
-              chipStyle: const ChipStyle(drawHexagon: true),
-            ),
-            SizedBox(height: height),
-            //2
-            BottomBarInspiredOutside(
-              items: items,
-              backgroundColor: bgColor,
-              color: color2,
-              colorSelected: Colors.white,
-              indexSelected: visit,
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-              top: -28,
-              animated: false,
-              itemStyle: ItemStyle.circle,
-              chipStyle: const ChipStyle(
-                notchSmoothness: NotchSmoothness.sharpEdge,
+            _bar(
+              BottomBarInspiredOutside(
+                items: items,
+                backgroundColor: bg,
+                color: unselected,
+                colorSelected: selected,
+                indexSelected: visit,
+                top: -25,
+                animated: true,
+                itemStyle: ItemStyle.hexagon,
+                chipStyle: const ChipStyle(drawHexagon: true),
+                onTap: _onTap,
               ),
-            ),
-            SizedBox(height: height),
-            //3
-            BottomBarInspiredOutside(
-              items: items,
-              backgroundColor: bgColor,
-              color: color2,
-              colorSelected: Colors.white,
-              indexSelected: visit,
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-              top: -28,
-              animated: false,
-              itemStyle: ItemStyle.circle,
-            ),
-            SizedBox(height: height),
-
-            BottomBarInspiredOutside(
-              items: items,
-              backgroundColor: bgColor,
-              color: color2,
-              colorSelected: Colors.white,
-              indexSelected: visit,
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-              top: -28,
-              animated: false,
-              itemStyle: ItemStyle.circle,
-              chipStyle: const ChipStyle(
-                notchSmoothness: NotchSmoothness.smoothEdge,
-              ),
-            ),
-            SizedBox(height: height),
-            //4
-            BottomBarInspiredOutside(
-              items: items,
-              backgroundColor: bgColor,
-              color: color2,
-              colorSelected: Colors.white,
-              indexSelected: visit,
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-              top: -28,
-              animated: false,
-              itemStyle: ItemStyle.circle,
-              chipStyle: const ChipStyle(
-                notchSmoothness: NotchSmoothness.verySmoothEdge,
-              ),
-            ),
-            SizedBox(height: height),
-            //5
-            BottomBarInspiredInside(
-              items: items,
-              backgroundColor: bgColor,
-              color: color2,
-              colorSelected: Colors.white,
-              indexSelected: visit,
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-              chipStyle: const ChipStyle(convexBridge: true),
-              itemStyle: ItemStyle.circle,
-              animated: false,
-            ),
-            SizedBox(height: height),
-
-            //7
-            BottomBarInspiredInside(
-              items: items,
-              backgroundColor: bgColor,
-              color: color2,
-              colorSelected: Colors.white,
-              indexSelected: visit,
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-              animated: false,
-              chipStyle: const ChipStyle(isHexagon: true, convexBridge: true),
-              itemStyle: ItemStyle.hexagon,
             ),
 
-            SizedBox(height: height),
-            BottomBarCreative(
-              items: items,
-              backgroundColor: Colors.green.withValues(alpha: 0.21),
-              color: color,
-              colorSelected: colorSelect,
-              indexSelected: visit,
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-            ),
-            SizedBox(height: height),
-            BottomBarCreative(
-              items: items,
-              backgroundColor: Colors.green.withValues(alpha: 0.21),
-              color: color,
-              colorSelected: colorSelect,
-              indexSelected: visit,
-              highlightStyle: const HighlightStyle(isHexagon: true),
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-            ),
-            SizedBox(height: height),
-            BottomBarCreative(
-              items: items,
-              backgroundColor: Colors.green.withValues(alpha: 0.21),
-              color: color,
-              colorSelected: colorSelect,
-              indexSelected: visit,
-              isFloating: true,
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-            ),
-            SizedBox(height: height),
-            BottomBarCreative(
-              items: items,
-              backgroundColor: Colors.green.withValues(alpha: 0.21),
-              color: color,
-              colorSelected: colorSelect,
-              indexSelected: visit,
-              isFloating: true,
-              highlightStyle: const HighlightStyle(
-                sizeLarge: true,
-                background: Colors.red,
-                elevation: 3,
+            _bar(
+              BottomBarInspiredOutside(
+                items: items,
+                backgroundColor: bg,
+                color: unselected,
+                colorSelected: selected,
+                indexSelected: visit,
+                top: -28,
+                itemStyle: ItemStyle.circle,
+                chipStyle: const ChipStyle(
+                  notchSmoothness: NotchSmoothness.sharpEdge,
+                ),
+                onTap: _onTap,
               ),
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
             ),
-            SizedBox(height: height),
 
-            BottomBarCreative(
-              items: items,
-              backgroundColor: Colors.green.withValues(alpha: 0.21),
-              color: color,
-              colorSelected: colorSelect,
-              indexSelected: visit,
-              isFloating: true,
-              highlightStyle: const HighlightStyle(
-                sizeLarge: true,
-                isHexagon: true,
-                elevation: 2,
-              ),
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-            ),
-            SizedBox(height: height),
-            BottomBarInspiredFancy(
-              items: items,
-              backgroundColor: Colors.green.withValues(alpha: 0.21),
-              color: color,
-              colorSelected: colorSelect,
-              indexSelected: visit,
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-            ),
-            SizedBox(height: height),
-            BottomBarInspiredFancy(
-              items: items,
-              backgroundColor: Colors.green.withValues(alpha: 0.21),
-              color: color,
-              colorSelected: colorSelect,
-              indexSelected: visit,
-              styleIconFooter: StyleIconFooter.dot,
-              onTap:
-                  (int index) => setState(() {
-                    visit = index;
-                  }),
-            ),
-            SizedBox(height: height),
-            BottomBarDivider(
-              items: items,
-              backgroundColor: Colors.amber,
-              color: Colors.grey,
-              colorSelected: ZiColors.primary,
-              indexSelected: visit,
-              onTap:
-                  (index) => setState(() {
-                    visit = index;
-                  }),
-              styleDivider: StyleDivider.bottom,
-              countStyle: const CountStyle(
-                background: Colors.white,
-                color: Colors.purple,
+            _bar(
+              BottomBarInspiredOutside(
+                items: items,
+                backgroundColor: bg,
+                color: unselected,
+                colorSelected: selected,
+                indexSelected: visit,
+                top: -28,
+                itemStyle: ItemStyle.circle,
+                chipStyle: const ChipStyle(
+                  notchSmoothness: NotchSmoothness.verySmoothEdge,
+                ),
+                onTap: _onTap,
               ),
             ),
-            SizedBox(height: height),
-            SectionDivider(label: "Cut Bars"),
-            // BottomBarSalomon(
-            //   items: items,
-            //   color: Colors.blue,
-            //   backgroundColor: Colors.white,
-            //   colorSelected: Colors.white,
-            //   backgroundSelected: Colors.blue,
-            //   borderRadius: BorderRadius.circular(0),
-            //   indexSelected: visit,
-            //   onTap:
-            //       (index) => setState(() {
-            //         visit = index;
-            //       }),
-            // ),
-            SectionDivider(label: "Zi Bars"),
-            ZiBottomBar(
-              items: items,
-              currentIndex: visit,
-              onTap: (i) => setState(() => visit = i),
-              type: ZiBottomBarType.fancy,
-              style: ZiBottomBarStyle.defaultStyle(),
+
+            /// =========================
+            /// INSIDE (EMBEDDED)
+            /// =========================
+            const SectionDivider(label: "Inspired - Inside", isComplete: true),
+
+            _bar(
+              BottomBarInspiredInside(
+                items: items,
+                backgroundColor: bg,
+                color: unselected,
+                colorSelected: selected,
+                indexSelected: visit,
+                chipStyle: const ChipStyle(convexBridge: true),
+                itemStyle: ItemStyle.circle,
+                onTap: _onTap,
+              ),
+            ),
+
+            _bar(
+              BottomBarInspiredInside(
+                items: items,
+                backgroundColor: bg,
+                color: unselected,
+                colorSelected: selected,
+                indexSelected: visit,
+                chipStyle: const ChipStyle(isHexagon: true, convexBridge: true),
+                itemStyle: ItemStyle.hexagon,
+                onTap: _onTap,
+              ),
+            ),
+
+            /// =========================
+            /// CREATIVE (HIGHLIGHT / FLOATING)
+            /// =========================
+            const SectionDivider(label: "Creative Bars", isComplete: true),
+
+            _bar(
+              BottomBarCreative(
+                items: items,
+                backgroundColor: ZiColors.primarySoft,
+                color: ZiColors.border,
+                colorSelected: ZiColors.primary,
+                indexSelected: visit,
+                onTap: _onTap,
+              ),
+            ),
+
+            _bar(
+              BottomBarCreative(
+                items: items,
+                backgroundColor: ZiColors.primarySoft,
+                color: ZiColors.border,
+                colorSelected: ZiColors.primary,
+                indexSelected: visit,
+                isFloating: true,
+                onTap: _onTap,
+              ),
+            ),
+
+            _bar(
+              BottomBarCreative(
+                items: items,
+                backgroundColor: ZiColors.primarySoft,
+                color: ZiColors.border,
+                colorSelected: ZiColors.primary,
+                indexSelected: visit,
+                isFloating: true,
+                highlightStyle: const HighlightStyle(
+                  sizeLarge: true,
+                  elevation: 3,
+                ),
+                onTap: _onTap,
+              ),
+            ),
+
+            /// =========================
+            /// FANCY / ANIMATED
+            /// =========================
+            const SectionDivider(label: "Fancy / Animated", isComplete: true),
+
+            _bar(
+              BottomBarInspiredFancy(
+                items: items,
+                backgroundColor: ZiColors.skeleton,
+                color: ZiColors.textMuted,
+                colorSelected: ZiColors.primary,
+                indexSelected: visit,
+                onTap: _onTap,
+              ),
+            ),
+
+            _bar(
+              BottomBarInspiredFancy(
+                items: items,
+                backgroundColor: ZiColors.skeleton,
+                color: ZiColors.textMuted,
+                colorSelected: ZiColors.primary,
+                indexSelected: visit,
+                styleIconFooter: StyleIconFooter.dot,
+                onTap: _onTap,
+              ),
+            ),
+
+            /// =========================
+            /// DIVIDER / UTILITY
+            /// =========================
+            const SectionDivider(label: "Divider / Utility", isComplete: true),
+
+            _bar(
+              BottomBarDivider(
+                items: items,
+                backgroundColor: Colors.amber,
+                color: Colors.grey,
+                colorSelected: ZiColors.primary,
+                indexSelected: visit,
+                styleDivider: StyleDivider.bottom,
+                onTap: _onTap,
+              ),
+            ),
+
+            /// =========================
+            /// YOUR DESIGN SYSTEM
+            /// =========================
+            const SectionDivider(label: "Zi Bottom Bars", isComplete: true),
+
+            _bar(
+              ZiBottomBar(
+                items: items,
+                currentIndex: visit,
+                onTap: _onTap,
+                type: ZiBottomBarType.fancy,
+                style: ZiBottomBarStyle.defaultStyle(),
+              ),
             ),
           ],
         ),
       ),
-      // bottomNavigationBar: Container(
-      //   padding: const EdgeInsets.only(bottom: 15, right: 15, left: 15),
-      //   child: BottomBarFloating(
-      //     items: items,
-      //     backgroundColor: Colors.black.withValues(alpha: 0.1),
-      //     color: Colors.white,
-      //     colorSelected: Colors.orange,
-      //     indexSelected: visit,
-      //     paddingVertical: 24,
-      //     onTap:
-      //         (int index) => setState(() {
-      //           visit = index;
-      //         }),
-      //   ),
-      // ),
+    );
+  }
+
+  void _onTap(int index) => setState(() => visit = index);
+
+  Widget _bar(Widget child) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 15),
+      child: child,
     );
   }
 }

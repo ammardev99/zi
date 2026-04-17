@@ -54,6 +54,23 @@ class _ZiPickersViewState extends State<ZiPickersView> {
           // smooth animation
           // theme tokens
           // returns typed result
+
+          ZiInput(
+            label: "Select Date: ${date?.toString()}",
+            // readOnly: true,
+            // value: date?.toString(),
+            type: ZiInputType.date,
+            suffix: IconButton(
+  icon: const Icon(Icons.calendar_month),
+  onPressed: () async {
+    final result = await ZiDatePicker.open(context);
+    if (result != null) {
+      setState(() => date = result);
+    }
+  },
+),
+          ),
+          Divider(),
           // =========================
           // CORE PICKERS
           // =========================
@@ -97,21 +114,21 @@ class _ZiPickersViewState extends State<ZiPickersView> {
           ziGap(12),
 
           /// RANGE
-          ZiInput(
-            label:
-                "Select Date Range${range == null ? null : "${range!.start} → ${range!.end}"}",
-            // readOnly: true,
-            // value: range == null ? null : "${range!.start} → ${range!.end}",
-            suffix: IconButton(
-              icon: const Icon(Icons.date_range),
-              onPressed: () async {
-                final result = await ZiPickers.range(context);
-                if (result != null) {
-                  setState(() => range = result as DateTimeRange?);
-                }
-              },
-            ),
-          ),
+          // ZiInput(
+          //   label:
+          //       "Select Date Range${range == null ? null : "${range!.start} → ${range!.end}"}",
+          //   // readOnly: true,
+          //   // value: range == null ? null : "${range!.start} → ${range!.end}",
+          //   suffix: IconButton(
+          //     icon: const Icon(Icons.date_range),
+          //     onPressed: () async {
+          //       final result = await ZiPickers.range(context);
+          //       if (result != null) {
+          //         setState(() => range = result as DateTimeRange?);
+          //       }
+          //     },
+          //   ),
+          // ),
 
           ziGap(20),
 

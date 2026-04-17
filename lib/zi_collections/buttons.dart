@@ -13,15 +13,6 @@ class ViewButtons extends StatelessWidget {
           /// =========================
           /// VARIANTS
           /// =========================
-          ///
-          ZiButtonB(
-            label: "Secondary",
-            variant: ZiButtonVariantB.text,
-            disabled: true,
-            action: () {},
-          ),
-
-          Divider(),
           const SectionDivider(label: "Gradient Variants", isComplete: true),
 
           const SizedBox(height: 8),
@@ -171,67 +162,25 @@ class ViewButtons extends StatelessWidget {
 
           const SizedBox(height: 24),
 
-          /// =========================
-          /// STYLE OVERRIDES
-          /// =========================
-          Wrap(
-            spacing: 12,
-            runSpacing: 12,
-            children: [
-              ZiButtonB(
-                label: "Custom",
-                action: () {},
-                style: ZiButtonStyleB(
-                  backgroundColor: Colors.blue,
-                  foregroundColor: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  elevation: 2,
-                  height: 44,
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                ),
-              ),
-
-              ZiButtonB(
-                label: "Gradient",
-                action: () {},
-                style: ZiButtonStyleB(
-                  gradientColors: [Colors.purple, Colors.blue],
-                  gradientDirection: ZiGradientDirectionB.leftToRight,
-                  foregroundColor: Colors.white,
-                ),
-              ),
-
-              ZiButtonB(
-                label: "Outline Custom",
-                variant: ZiButtonVariantB.outline,
-                action: () {},
-                style: ZiButtonStyleB(
-                  borderColor: Colors.orange,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-              ZiButtonB(label: "Full Width", action: () {}, expand: true),
-              const SectionDivider(label: "Customization", isComplete: true),
-              const Text(
-                "backgroundColor, borderColor, borderRadius, elevation, expand, foregroundColor, "
-                "gradientColors, gradientDirection, height, hoverColor, iconSize, padding, splashColor, textStyle, width",
-              ),
-              const SizedBox(height: 12),
-            ],
+          const SectionDivider(label: "Customization", isComplete: true),
+          const Text(
+            "backgroundColor, borderColor, borderRadius, elevation, expand, foregroundColor, "
+            "gradientColors, gradientDirection, height, hoverColor, iconSize, padding, splashColor, textStyle, width",
           ),
+          const SizedBox(height: 12),
           Wrap(
             spacing: 12,
             runSpacing: 12,
             children: [
               /// =========================
-              /// BASIC CUSTOM COLOR
+              /// FIXED HEIGHT BUTTON
               /// =========================
               ZiButtonB(
-                label: "Custom Color",
+                label: "Height 24",
                 action: () {},
                 style: ZiButtonStyleB(
-                  backgroundColor: Colors.blue,
-                  foregroundColor: Colors.white,
+                  height: 24,
+                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
 
@@ -243,43 +192,20 @@ class ViewButtons extends StatelessWidget {
                 variant: ZiButtonVariantB.outline,
                 action: () {},
                 style: ZiButtonStyleB(
-                  borderColor: Colors.orange,
+                  borderColor: ZiColors.primary,
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
 
               /// =========================
-              /// GRADIENT BUTTON
+              /// BASIC CUSTOM COLOR
               /// =========================
               ZiButtonB(
-                label: "Gradient",
+                label: "Custom Color",
                 action: () {},
                 style: ZiButtonStyleB(
-                  gradientColors: [Colors.purple, Colors.blue],
-                  gradientDirection: ZiGradientDirectionB.topToBottom,
+                  backgroundColor: Colors.blue,
                   foregroundColor: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-
-              /// =========================
-              /// FULL WIDTH BUTTON
-              /// =========================
-              ZiButtonB(
-                label: "Full Width",
-                action: () {},
-                style: ZiButtonStyleB(expand: true),
-              ),
-
-              /// =========================
-              /// FIXED HEIGHT BUTTON
-              /// =========================
-              ZiButtonB(
-                label: "Height 50",
-                action: () {},
-                style: ZiButtonStyleB(
-                  height: 50,
-                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
 
@@ -306,30 +232,6 @@ class ViewButtons extends StatelessWidget {
                 label: "Icon Size",
                 action: () {},
                 style: ZiButtonStyleB(iconSize: 28),
-              ),
-
-              /// =========================
-              /// ELEVATION + SHADOW
-              /// =========================
-              ZiButtonB(
-                label: "Elevated",
-                action: () {},
-                style: ZiButtonStyleB(
-                  elevation: 6,
-                  borderRadius: BorderRadius.circular(14),
-                ),
-              ),
-
-              /// =========================
-              /// HOVER + SPLASH EFFECT
-              /// =========================
-              ZiButtonB(
-                label: "Interactive",
-                action: () {},
-                style: ZiButtonStyleB(
-                  hoverColor: Colors.black12,
-                  splashColor: Colors.blue.withValues(alpha: 0.2),
-                ),
               ),
 
               /// =========================
@@ -371,6 +273,9 @@ class ViewButtons extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 12),
+          ZiButtonB(label: "Full Width", action: () {}, expand: true),
+          const SizedBox(height: 12),
 
           Wrap(
             spacing: 12,
@@ -390,23 +295,6 @@ class ViewButtons extends StatelessWidget {
               ),
 
               /// -------------------------
-              /// GREEN → TEAL (SUCCESS)
-              /// -------------------------
-              ZiButtonB(
-                label: "Success Gradient",
-                variant: ZiButtonVariantB.gradientFill,
-                action: () {},
-                expand: false,
-
-                style: ZiButtonStyleB(
-                  expand: false,
-
-                  gradientColors: const [Color(0xFF10B981), Color(0xFF14B8A6)],
-                  textStyle: const TextStyle(color: Colors.white),
-                ),
-              ),
-
-              /// -------------------------
               /// ORANGE → RED (WARNING / DANGER)
               /// -------------------------
               ZiButtonB(
@@ -417,19 +305,6 @@ class ViewButtons extends StatelessWidget {
                 style: ZiButtonStyleB(
                   expand: false,
                   gradientColors: const [Color(0xFFF97316), Color(0xFFEF4444)],
-                  textStyle: const TextStyle(color: Colors.white),
-                ),
-              ),
-
-              // /// -------------------------
-              // /// SKY → BLUE (INFO)
-              // /// -------------------------
-              ZiButtonB(
-                label: "Info Gradient",
-                variant: ZiButtonVariantB.gradientFill,
-                action: () {},
-                style: ZiButtonStyleB(
-                  gradientColors: const [Color(0xFF38BDF8), Color(0xFF2563EB)],
                   textStyle: const TextStyle(color: Colors.white),
                 ),
               ),
@@ -457,31 +332,6 @@ class ViewButtons extends StatelessWidget {
                 style: ZiButtonStyleB(
                   gradientColors: const [Color(0xFF111827), Color(0xFF374151)],
                   textStyle: const TextStyle(color: Colors.white),
-                ),
-              ),
-
-              /// -------------------------
-              /// GRADIENT OUTLINE EXAMPLE
-              /// -------------------------
-              ZiButtonB(
-                label: "Gradient",
-                variant: ZiButtonVariantB.gradientOutline,
-                action: () {},
-                style: ZiButtonStyleB(
-                  gradientColors: const [Color(0xFF6366F1), Color(0xFF8B5CF6)],
-                  textStyle: const TextStyle(fontWeight: FontWeight.w500),
-                ),
-              ),
-              ZiButtonB(
-                label: "B&W",
-                variant: ZiButtonVariantB.gradientOutline,
-                action: () {},
-                style: ZiButtonStyleB(
-                  gradientColors: const [
-                    Color.fromARGB(255, 255, 156, 156),
-                    Color.fromARGB(255, 74, 0, 246),
-                  ],
-                  textStyle: const TextStyle(fontWeight: FontWeight.w500),
                 ),
               ),
             ],
