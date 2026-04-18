@@ -16,7 +16,20 @@ class ViewLoadings extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ZiLoading(type: ZiLoadingType.circular),
-              // ZiLoading(type: ZiLoadingType.circular, style: ZiLoadingStyle(color: Colors.red, size: 40, strokeWidth: 6),),
+              Container(
+                width: 80,
+                height: 80,
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                color: Colors.grey.shade200,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(width: 1, color: ZiColors.skeleton),
+                ),
+                child: ZiLoading(
+                  type: ZiLoadingType.circular,
+                  ziLoadstyle: ZiLoadingStyle(color: Colors.red, size: 40),
+                ),
+              ),
               ZiLoading(type: ZiLoadingType.circularTheme),
             ],
           ),
@@ -52,32 +65,23 @@ class ViewLoadings extends StatelessWidget {
           SizedBox(height: 20),
           ZiSectionTag(title: "skeleton List"),
           // list loading
-          Container(
-            margin: EdgeInsets.all(15),
-            child: ZiLoading(
-              type: ZiLoadingType.skeleton,
-              ziLoadstyle: ZiLoadingStyle(size: 80),
-            ),
+          ZiLoading(
+            type: ZiLoadingType.skeleton,
+            ziLoadstyle: ZiLoadingStyle(size: 80),
           ),
           ZiSectionTag(title: "skeleton"),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: ZiLoading(
-              type: ZiLoadingType.skeleton,
-              ziLoadstyle: ZiLoadingStyle(value: 4, size: 40),
-            ),
+          ZiLoading(
+            type: ZiLoadingType.skeleton,
+            ziLoadstyle: ZiLoadingStyle(value: 4, size: 40),
           ),
 
           ZiSectionTag(title: "skeleton cards"),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: ZiLoading(
-              type: ZiLoadingType.skeletonGrid,
-              ziLoadstyle: ZiLoadingStyle(
-                columns: 2,
-                count: 6,
-                size: 2, // ratio
-              ),
+          ZiLoading(
+            type: ZiLoadingType.skeletonGrid,
+            ziLoadstyle: ZiLoadingStyle(
+              columns: 2,
+              count: 6,
+              size: 2, // ratio
             ),
           ),
         ],

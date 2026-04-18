@@ -14,7 +14,6 @@ class _ZiSnackBarViewState extends State<ZiSnackBarView> {
 
   @override
   Widget build(BuildContext context) {
-    ZiStatusToast.init(context);
     return ZiScaffoldB(
       // appBar: ZiAppBarB(title: 'ZiToast — Use Cases'),
       body: ListView(
@@ -66,7 +65,7 @@ class _ZiSnackBarViewState extends State<ZiSnackBarView> {
                 icon: Icons.check_circle_outline,
                 color: ZiColors.success,
                 onTap:
-                    () => ZiStatusToast.success(
+                    () => ZiSnackBarD.success(
                       'Saved successfully',
                       subtitle: 'All changes synced',
                     ),
@@ -77,7 +76,7 @@ class _ZiSnackBarViewState extends State<ZiSnackBarView> {
                 icon: Icons.error_outline,
                 color: ZiColors.error,
                 onTap:
-                    () => ZiStatusToast.error(
+                    () => ZiSnackBarD.error(
                       'Upload failed',
                       subtitle: 'Please try again',
                     ),
@@ -88,7 +87,7 @@ class _ZiSnackBarViewState extends State<ZiSnackBarView> {
                 icon: Icons.warning_amber_outlined,
                 color: ZiColors.warning,
                 onTap:
-                    () => ZiStatusToast.warning(
+                    () => ZiSnackBarD.warning(
                       'Low storage',
                       subtitle: 'Only 2GB left',
                     ),
@@ -99,7 +98,7 @@ class _ZiSnackBarViewState extends State<ZiSnackBarView> {
                 icon: Icons.info_outline,
                 color: const Color(0xFF2563EB),
                 onTap:
-                    () => ZiStatusToast.info(
+                    () => ZiSnackBarD.info(
                       'New version available',
                       subtitle: 'v2.1.0 is ready to install.',
                     ),
@@ -565,156 +564,57 @@ class _ZiSnackBarViewState extends State<ZiSnackBarView> {
 
           const Divider(), Divider(),
           // Do later
-          const SectionDivider(label: 'Style Status', isComplete: true),
 
-          Divider(),
-          _SectionLabel('Status Types'),
-          _ToastRow(
-            children: [
-              _SnackButton(
-                label: 'Success',
-                icon: Icons.check_circle_outline,
-                color: const Color(0xFF16A34A),
-                onTap:
-                    () => ZiStatusToast.success(
-                      'Changes saved',
-                      subtitle: 'All data has been updated.',
-                    ),
-              ),
-              _SnackButton(
-                label: 'Error',
-                icon: Icons.cancel_outlined,
-                color: const Color(0xFFDC2626),
-                onTap:
-                    () => ZiStatusToast.error(
-                      'Something went wrong',
-                      subtitle: 'Please try again.',
-                    ),
-              ),
-              _SnackButton(
-                label: 'Warning',
-                icon: Icons.warning_amber_outlined,
-                color: const Color(0xFFD97706),
-                onTap:
-                    () => ZiStatusToast.warning(
-                      'Unsaved changes',
-                      subtitle: 'You have pending edits.',
-                    ),
-              ),
-              _SnackButton(
-                label: 'Info',
-                icon: Icons.info_outline,
-                color: const Color(0xFF2563EB),
-                onTap:
-                    () => ZiStatusToast.info(
-                      'New version available',
-                      subtitle: 'v2.1.0 is ready to install.',
-                    ),
-              ),
-            ],
-          ),
-
-          _SectionLabel('Loading State'),
-          _ToastRow(
-            children: [
-              _SnackButton(
-                label: 'Loading',
-                icon: Icons.hourglass_empty_outlined,
-                color: ZiColors.accent,
-                onTap: () {
-                  ZiStatusToast.loading('Uploading file...');
-                  // simulate async then dismiss
-                  Future.delayed(
-                    const Duration(seconds: 3),
-                    () => ZiStatusToast.success('Upload complete'),
-                  );
-                },
-              ),
-              _SnackButton(
-                label: 'Dismiss',
-                icon: Icons.close_rounded,
-                color: ZiColors.grayLight,
-                onTap: ZiStatusToast.dismiss,
-              ),
-            ],
-          ),
-
-          _SectionLabel('Position Variants'),
-          _ToastRow(
-            children: [
-              _SnackButton(
-                label: 'Top',
-                icon: Icons.vertical_align_top_rounded,
-                color: ZiColors.accent,
-                onTap:
-                    () => ZiStatusToast.info(
-                      'Showing at top',
-                      position: ZiStatusToastPosition.top,
-                    ),
-              ),
-              _SnackButton(
-                label: 'Bottom',
-                icon: Icons.vertical_align_bottom_rounded,
-                color: ZiColors.accent,
-                onTap:
-                    () => ZiStatusToast.info(
-                      'Showing at bottom',
-                      position: ZiStatusToastPosition.bottom,
-                    ),
-              ),
-            ],
-          ),
-
-          _SectionLabel('Real App Scenarios'),
-          _ScenarioCard(
-            title: 'Form Submit',
-            subtitle: 'Success after save',
-            onTap: () async {
-              ZiStatusToast.loading('Saving your data...');
-              await Future.delayed(const Duration(seconds: 2));
-              ZiStatusToast.success(
-                'Profile updated',
-                subtitle: 'Your info is saved.',
-              );
-            },
-          ),
-          _ScenarioCard(
-            title: 'Network Error',
-            subtitle: 'Offline or API failure',
-            onTap:
-                () => ZiStatusToast.error(
-                  'No internet connection',
-                  subtitle: 'Check your connection and retry.',
-                  duration: const Duration(seconds: 5),
-                ),
-          ),
-          _ScenarioCard(
-            title: 'Sync in Background',
-            subtitle: 'Show loading, dismiss on done',
-            onTap: () async {
-              ZiStatusToast.loading('Syncing data...');
-              await Future.delayed(const Duration(seconds: 3));
-              ZiStatusToast.success('Sync complete');
-            },
-          ),
-          _ScenarioCard(
-            title: 'Delete Action',
-            subtitle: 'Destructive confirmation feedback',
-            onTap:
-                () => ZiStatusToast.warning(
-                  'Item deleted',
-                  subtitle: 'This action cannot be undone.',
-                ),
-          ),
-          _ScenarioCard(
-            title: 'Feature Notice',
-            subtitle: 'Upgrade or feature flag',
-            onTap:
-                () => ZiStatusToast.info(
-                  'Pro feature',
-                  subtitle: 'Upgrade to unlock this feature.',
-                ),
-          ),
+          // _SectionLabel('Real App Scenarios'),
+          // _ScenarioCard(
+          //   title: 'Form Submit',
+          //   subtitle: 'Success after save',
+          //   onTap: () async {
+          //     ZiSnackBarD.loading('Saving your data...');
+          //     await Future.delayed(const Duration(seconds: 2));
+          //     ZiSnackBarD.success(
+          //       'Profile updated',
+          //       subtitle: 'Your info is saved.',
+          //     );
+          //   },
+          // ),
+          // _ScenarioCard(
+          //   title: 'Network Error',
+          //   subtitle: 'Offline or API failure',
+          //   onTap:
+          //       () => ZiSnackBarD.error(
+          //         'No internet connection',
+          //         subtitle: 'Check your connection and retry.',
+          //         duration: const Duration(seconds: 5),
+          //       ),
+          // ),
+          // _ScenarioCard(
+          //   title: 'Sync in Background',
+          //   subtitle: 'Show loading, dismiss on done',
+          //   onTap: () async {
+          //     ZiSnackBarD.loading('Syncing data...');
+          //     await Future.delayed(const Duration(seconds: 3));
+          //     ZiSnackBarD.success('Sync complete');
+          //   },
+          // ),
+          // _ScenarioCard(
+          //   title: 'Delete Action',
+          //   subtitle: 'Destructive confirmation feedback',
+          //   onTap:
+          //       () => ZiSnackBarD.warning(
+          //         'Item deleted',
+          //         subtitle: 'This action cannot be undone.',
+          //       ),
+          // ),
+          // _ScenarioCard(
+          //   title: 'Feature Notice',
+          //   subtitle: 'Upgrade or feature flag',
+          //   onTap:
+          //       () => ZiSnackBarD.info(
+          //         'Pro feature',
+          //         subtitle: 'Upgrade to unlock this feature.',
+          //       ),
+          // ),
         ],
       ),
     );
@@ -722,25 +622,6 @@ class _ZiSnackBarViewState extends State<ZiSnackBarView> {
 }
 
 // ─── PRIVATE WIDGETS ───────────────────────────────────────────────
-
-class _SectionLabel extends StatelessWidget {
-  final String label;
-  const _SectionLabel(this.label);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 24, bottom: 10),
-      child: Text(
-        label.toUpperCase(),
-        style: Theme.of(context).textTheme.labelSmall?.copyWith(
-          color: ZiColors.grayLight,
-          letterSpacing: 1.2,
-        ),
-      ),
-    );
-  }
-}
 
 class _ToastRow extends StatelessWidget {
   final List<Widget> children;
@@ -800,6 +681,7 @@ class _SnackButton extends StatelessWidget {
   }
 }
 
+// ignore: unused_element
 class _ScenarioCard extends StatelessWidget {
   final String title;
   final String subtitle;

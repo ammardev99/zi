@@ -45,17 +45,18 @@ class ViewButtons extends StatelessWidget {
               ),
 
               ZiButtonB(
-                label: "Danger",
-                variant: ZiButtonVariantB.destructive,
-                action: () {},
-              ),
-
-              ZiButtonB(
                 label: "Text",
                 variant: ZiButtonVariantB.text,
                 action: () {},
               ),
+            ],
+          ),
 
+          const SizedBox(height: 20),
+          Divider(),
+          const SizedBox(height: 20),
+          Wrap(
+            children: [
               ZiButtonB(
                 label: "Inline",
                 variant: ZiButtonVariantB.inLine,
@@ -138,8 +139,6 @@ class ViewButtons extends StatelessWidget {
             ],
           ),
 
-          const SizedBox(height: 24),
-
           /// =========================
           /// STATES
           /// =========================
@@ -150,7 +149,12 @@ class ViewButtons extends StatelessWidget {
             children: [
               ZiButtonB(label: "Loading", loading: true, action: () {}),
 
-              ZiButtonB(label: "Disabled", disabled: true, action: () {}),
+              ZiButtonB(
+                label: "Disabled",
+                style: ZiButtonStyleB(foregroundColor: ZiColors.textMuted),
+                disabled: true,
+                action: () {},
+              ),
 
               ZiButtonB(
                 label: "With Icon",
@@ -187,15 +191,15 @@ class ViewButtons extends StatelessWidget {
               /// =========================
               /// BORDER + OUTLINE STYLE
               /// =========================
-              ZiButtonB(
-                label: "Border Style",
-                variant: ZiButtonVariantB.outline,
-                action: () {},
-                style: ZiButtonStyleB(
-                  borderColor: ZiColors.primary,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
+              // ZiButtonB(
+              //   label: "Border Style",
+              //   variant: ZiButtonVariantB.outline,
+              //   action: () {},
+              //   style: ZiButtonStyleB(
+              //     borderColor: ZiColors.primary,
+              //     borderRadius: BorderRadius.circular(8),
+              //   ),
+              // ),
 
               /// =========================
               /// BASIC CUSTOM COLOR
@@ -253,7 +257,7 @@ class ViewButtons extends StatelessWidget {
               /// COMBINED PREMIUM STYLE
               /// =========================
               ZiButtonB(
-                label: "Premium",
+                label: "Black",
                 action: () {},
                 style: ZiButtonStyleB(
                   backgroundColor: Colors.black,
@@ -263,6 +267,19 @@ class ViewButtons extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(
                     horizontal: 24,
                     vertical: 12,
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 140,
+                child: ZiButtonB(
+                  label: "Premium",
+                  variant: ZiButtonVariantB.gradientFill,
+                  action: () {},
+                  style: ZiButtonStyleB(
+                    borderRadius: BorderRadius.circular(100),
+                    gradientColors: [ZiColors.primary, ZiColors.secondary],
+                    textStyle: const TextStyle(color: Colors.white),
                   ),
                 ),
               ),

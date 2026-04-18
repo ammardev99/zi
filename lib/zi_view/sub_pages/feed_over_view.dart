@@ -193,7 +193,7 @@ class FeedOverViewPage extends StatelessWidget {
     );
 
     if (result != null && context.mounted) {
-      ZiStatusToast.success('Selected: $result');
+      ZiSnackBarD.success('Selected: $result');
     }
   }
 

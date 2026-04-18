@@ -3,7 +3,6 @@ import 'package:zi/web_view/site/web_collection.dart';
 import 'package:zi_core/zi_core_io.dart'; // Best practice barrel export
 
 void main() {
-  ZiStatusToast.navigatorKey;
   ZiColors.override(
     ZiColorOverrides(
       primary: const Color(0xFFBD00FF),
