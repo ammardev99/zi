@@ -3,6 +3,9 @@ import 'package:zi/web_view/site/web_collection.dart';
 import 'package:zi_core/zi_core_io.dart'; // Best practice barrel export
 
 void main() {
+  // ziCoreInit(); // for now
+  // ziInit(); // next update i will make it
+  // ziConfig(); //or like this so i can use ZiColors.override, ZiInputStyle.overide...
   ZiColors.override(
     ZiColorOverrides(
       primary: const Color(0xFFBD00FF),
